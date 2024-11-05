@@ -1,0 +1,45 @@
+
+body{
+    background-color: rgba(55, 114, 223, 0.26);
+
+}
+
+.para{
+    /* color - cor da fonte*/
+color: rgb(255, 255, 255);
+/*font family - tipografia */
+font-family: Arial, Helvetica, sans-serif;
+/*background color =- cor de fundo*/
+/* background-color: rgba(255, 241, 222, 0.747); */
+}
+
+h1{
+color: rgb(33, 94, 148);
+/*text-alig - alinhar texto no centro*/
+text-align: center;
+/*margin - margem externa*/
+margin: 20px;
+/*padding - margem interna*/
+padding: 20px;
+/*border - borde (largura, tipo, cor)*/
+border: 1px solid rgb(24, 43, 129);
+}
+
+#destacado{
+background-color: antiquewhite;
+}
+
+h2{
+    font-size: 80px;
+    color: brown;
+}
+img {
+    /*largura*/
+    width: 400px;
+    /*altura*/
+    height:auto;
+    /*arrendondamento da img*/
+    border-radius: 100%;
+    border: 5px solid black; 
+    
+}
