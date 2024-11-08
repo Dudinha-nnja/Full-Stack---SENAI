@@ -1,0 +1,60 @@
+* {
+    padding: 0%;
+    margin: 0%;
+}
+.pai {
+     width: 200px;
+     height: 300px;
+     background-color: gray;
+     /* posicionamento no pai */
+     display:flex;
+     justify-content: space-around;
+     align-items: center;
+     margin: 20px;
+      /* start (left) - esquerda*/
+     /* end (right) - direita*/
+     /* center - centro*/
+     /*space between - joga os elementos na lateral */
+     /* space around - joga os elementos */
+}
+.pai1 {
+    /* Alinhamento do eixo x*/ 
+    justify-content: space-around;
+    /* alinhamento do eixo y*/
+     align-items: center;
+    
+}
+.pai2 { 
+    /* gap - espaço entre elementos*/
+    gap: 20px;
+    /*wrap - joga elemento*/
+    flex-wrap: wrap;
+    /* now - linha*/
+    /* columm - coluna*/
+    flex-direction: row; 
+}
+.f1 {
+    width: 30px;
+    height: 30px;
+    
+    background-color: blue;
+    
+    
+}
+.f2 {
+      width: 30px;
+      height: 30px;
+     background-color: blueviolet;
+}
+.f3 {
+     width: 30px;
+     height: 30px;
+    background-color: cadetblue;
+}
+
+.f4 {
+    width: 30px;
+    height: 30px;
+    background-color: brown;
+
+}
