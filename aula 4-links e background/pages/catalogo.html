@@ -6,6 +6,10 @@
     <title>catalogo</title>
     <link rel="stylesheet" href="">
     <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
         body{
 background-color: #fff;
 text-align: center;
@@ -31,7 +35,7 @@ header h2{
 }
 nav a{
     color: #fff;
-    /*texte decoraion decoração do texto*/
+    /*texte decorattion decoração do texto*/
     text-decoration: none;
 }
 footer{
@@ -45,6 +49,39 @@ img{
     width: 800px;
     height: auto;
 }
+.produto {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px  black;
+
+}
+.produto img{
+    width: 100%;
+
+
+}
+#catalogo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+.produto button{
+    background-color: rgb(255, 196, 0);
+    border-radius: 10%;
+    font-size: 20px;
+    padding: 12px;
+}
+.produto p {
+    font-size: 20px;
+}
     </style>
 </head>
 <body>
@@ -54,12 +91,52 @@ img{
        <!-- <a href="https://www.google.com.br/">google</a> -->
         <a href="index.html"> Home</a>
         <a href="catalogo.html">Catalogo</a>
-          
+          <a href="sobrenos.html">mim e vc</a>
         </nav>
       </header>
       <main>
         <h1>Catalogo bonitinho</h1>
-        <img src="images/leather-shoes-walking-fall-leaves-outdoor.jpg" alt="">
+        <br><br>
+        <!-- <img src="images/leather-shoes-walking-fall-leaves-outdoor.jpg" alt=""> -->
+        <div id="catalogo">
+            <div class="produto">
+             <img src="images/young-woman-autumn-park-throwing-leaves.jpg" alt=""> 
+             <h3>canada</h3>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptatum corporis facilis commodi aliquam quo obcaecati asperiores est, eius maxime cumque sunt fugiat, nulla, perspiciatis quia odit impedit. Possimus, ratione!</p>
+            <h4>R$500</h4>
+            <button>Comprar</button>
+            
+            </div>
+            <div class="produto">
+                <img src="images/young-woman-autumn-park-throwing-leaves.jpg" alt=""> 
+                <h3>canada</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptatum corporis facilis commodi aliquam quo obcaecati asperiores est, eius maxime cumque sunt fugiat, nulla, perspiciatis quia odit impedit. Possimus, ratione!</p>
+               <h4>R$500</h4>
+               <button>Comprar</button>
+               </div>
+               <div class="produto">
+                <img src="images/young-woman-autumn-park-throwing-leaves.jpg" alt=""> 
+                <h3>canada</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptatum corporis facilis commodi aliquam quo obcaecati asperiores est, eius maxime cumque sunt fugiat, nulla, perspiciatis quia odit impedit. Possimus, ratione!</p>
+               <h4>R$500</h4>
+               <button>Comprar</button>
+               </div>
+               <div class="produto">
+                <img src="images/young-woman-autumn-park-throwing-leaves.jpg" alt=""> 
+                <h3>canada</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptatum corporis facilis commodi aliquam quo obcaecati asperiores est, eius maxime cumque sunt fugiat, nulla, perspiciatis quia odit impedit. Possimus, ratione!</p>
+               <h4>R$500</h4>
+               <button>Comprar</button>
+               </div>
+               <div class="produto">
+                <img src="images/young-woman-autumn-park-throwing-leaves.jpg" alt=""> 
+                <h3>canada</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam voluptatum corporis facilis commodi aliquam quo obcaecati asperiores est, eius maxime cumque sunt fugiat, nulla, perspiciatis quia odit impedit. Possimus, ratione!</p>
+               <h4>R$500</h4>
+               <button>Comprar</button>
+               </div>
+        </div>
+
       </main>
 <footer>
     

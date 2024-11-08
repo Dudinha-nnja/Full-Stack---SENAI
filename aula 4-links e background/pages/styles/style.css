@@ -52,3 +52,18 @@ footer{
 h3 {
     color: #fff;
 }
+.produto {
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: gray;
+}
+.produtoimg {
+    width: 100%;
+
+
+}
