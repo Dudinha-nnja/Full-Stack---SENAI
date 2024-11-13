@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(10, 0, 143);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url() ;
+        }
+        main {
+            width: 70%;
+            height: 400px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+            color: #000;
+        } 
+        form { 
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            background-color: #fff;
+        }
+        .form-group{
+            height: 30px;
+            flex-direction: column;
+            background-color: rgb(255, 255, 255);
+        }
+        input{
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+            box-shadow: 1px 1px 1px 1px #000;
+
+        }
+        input:focus{
+            padding: 8px;
+            transition: 0.2s;
+            border: 1px solid purple;
+
+        }
+        button{
+            border-radius: 30px;
+            width: 100px;
+            background-color: rgb(3, 3, 126);
+            color: #fff;
+        }
+        button:hover{
+            background-color: #fff;
+            color: rgb(7, 7, 128);
+            width: 120px;
+            transition: 0.2s;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+        
+        <h1>Formulariozinho </h1>
+        <br>
+        <form action="#">
+
+        <!-- Nome -->
+
+        <div class="form-group">
+        <label for="nome"> Nome:</label> 
+        <input placeholder="Seu nome querido" required type="text" id="nome" >
+         
+    </div>
+
+       <!-- Email -->
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input placeholder="Ex: username@gmail.com" type="text" name="email" id="email">
+        </div>
+
+        <!-- senha -->
+   <div class="form-group">
+    <label for="senha">Senha:</label>
+    <input placeholder="sua senha secreta" required type="password" name="" id="senha">
+   </div>
+             
+<!-- data -->
+    <div class="form-group">
+
+    <label for="data">Data:</label>
+        <input type="date" name="" id="">
+    </div>
+
+        <!-- sexo -->
+
+         <div class="form-group">
+            <label for="sexo">Sexo:</label>
+        <select name="" id="sexo">
+        <option value="">Feminino</option>
+        <option value="">Masculino</option>
+        <option value="">Outros</option>
+    </select>
+</div>
+
+    <button onclick="mensagem()">CONFIRMAR</button>
+
+    </form>
+
+    </main>
+    <script>
+        function mensagem(){
+            alert('usuario cadastrado com sucesso!')
+        }
+    </script>
+
+</body>
+</html>
