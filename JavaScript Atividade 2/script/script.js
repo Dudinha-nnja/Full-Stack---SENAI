@@ -33,3 +33,43 @@ function calculadora(){
             alert("O total da multiplicação é:" +multiplicacao)
         }
     }
+     
+    function nota(){
+        
+        nota = Number(prompt('digite a sua nota'))
+        
+        if(nota >= 7){
+        alert('Você foi aprovado! :)')
+
+        }else{
+            alert('Você não foi aprovado! :(')
+  
+        }
+        }
+        
+        function semana(){
+            alert("Escolha um dia da semana") 
+escolha = prompt('1) Segunda-feira  2) Terça-feira 3) Quarta-feira 4) Quinta-feira 5) Sexta-feira 6) Sabado 7) Domingo ')
+switch(escolha){
+    case '1':
+        alert('voce escolheu Segunda-feira')
+        break
+    case '2':
+        alert('voce escolheu Terça-feira')
+        break
+    case '3':
+        alert('voce escolheu Quarta-feira ')
+        break
+    case '4':
+        alert('voce escolheu Quinta-feira')
+        break
+    case '5':
+        alert('voce escolheu Sexta-feira')
+        break
+     case '6':
+        alert('voce escolheu Sabado')           
+     case '7':
+        alert('voce escolheu Domingo')
+        break
+    }
+}
