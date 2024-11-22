@@ -33,6 +33,11 @@
             color: #fff;
             font-size: 20px;
         }
+        nav a:hover{
+            font-size: 30px;
+            color: #074d04;
+            transition: 03s linear;
+        }
         #logo{
             display: flex;
             gap: 20px;
@@ -58,6 +63,7 @@
             justify-content: center;
             gap: 20px;
             border-radius: 20px;
+            flex-wrap: wrap;
         }
         .livro{
             width: 200px;
@@ -85,15 +91,24 @@
             font-size: 15px;
             
         }
+        button:hover{
+            background-color: #064d04d5;
+            color: #fff;
+            transition: 0.4s;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
         .livro h4{
             color: #000000;
         }
+
     
     </style>
     <title>Natal</title>
 </head>
 <body>
-    
+    <audio id="musica" autoplay loop>
+        <source src="img/jingle-bells-180104.mp3" type="audio/mp3">
+    </audio>
     <header>
         <div id="logo">
             <img src="img/christmas-wreath (3).png" alt="guirlanda">   
@@ -108,17 +123,11 @@
             </nav>
         </header>
         <br>
-        <h1>O expresso polar</h1>
+        <h1>A Magia do Natal</h1>
         <br>
+        <!-- <img src="img/esqueceramdeeu.webp" alt=""> -->
             <section id="catalogo">
-                <div class="livro">
-                    <img src="img/expressopolar.webp" alt="">
-                    <h4>O EXPRESSO POLAR</h4>
-                    <button>
-                        adicionar
-                        <img src="img/plus.svg" alt="">
-                    </button>
-                </div>
+
             </section>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         

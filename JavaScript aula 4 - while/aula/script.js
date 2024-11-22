@@ -12,17 +12,38 @@ alert(`que legal! fiz ${i+1} vezes`)
 
 // testes()
 function carregarCatalogo(){
-    for(var i=0; i < 5; i++){
+    var livros = [
+        [`img/expressopolar.webp`, `O Expresso Polar`],
+        ['img/grite.jpg', 'O Grinch'],
+        [`img/esqueceramdeeu.webp`, `esqueceram de eu`],
+
+        [`img/oestranhomundodejack.webp`, `O estranho mundo de jack`],
+
+        [`img/natalmickey.webp`, `O natal do Mickey Mouse`],
+
+        [`img/guardiao.webp`, `Os guardiões`],
+
+        [`img/bela.jfif`, `A Bela e a Fera`],
+
+
+
+    ]
+    livros.forEach(cadaLivro=> {
         document.getElementById('catalogo').innerHTML+= `
          <div class="livro">
-                    <img src="img/expressopolar.webp" alt="">
-                    <h4>O EXPRESSO POLAR</h4>
+                    <img src="${cadaLivro[0]}" alt="">
+                    <h4>${cadaLivro[1]}</h4>
                     <button>
                         adicionar
                         <img src="img/plus.svg" alt="">
                     </button>
                 </div>
         `
-    }
+    })
 }
 carregarCatalogo()
+
+window.onload = function() {
+    var audio = document.getElementById('musica');
+    audio.play();
+};
