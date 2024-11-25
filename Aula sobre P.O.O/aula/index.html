@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    background-color: cadetblue;
+}
+.post{
+    width: 90%;
+    height: auto;
+    background-color:rgb(255, 255, 255);
+    color: #000000;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+input{
+    width: 200px;
+    height: 20px;
+
+}
+button{
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: darkgreen;
+    color: #fff;
+}
+button:hover{
+    background-color: darkred;
+    color: #fff;
+}
+header{
+    background-color: rgb(158, 0, 0);
+    color: #fff;
+}
+header img{
+    border-radius: 1500px;
+    width: 150px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="aula/sherek.webp" alt="">
+        
+    </header>
+    <input type="text" id="pensamento" placeholder="Escreva alguma coisa aqui...">
+    <button onclick="postarFeed()">Postar</button>
+    <div id="resposta"></div>
+    <!-- <script src="script.js"></script> -->
+    <script src="script2.js"></script>
+</body>
+</html>
