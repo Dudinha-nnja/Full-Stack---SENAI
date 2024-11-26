@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
 body{
-    background-color: cadetblue;
+    background-color: rgb(255, 255, 255);
 }
 .post{
     width: 90%;
     height: auto;
-    background-color:rgb(255, 255, 255);
-    color: #000000;
+    background-color:rgb(26, 95, 55);
+    color: #ffffff;
     padding: 10px;
     margin: 10px auto;
     border-radius: 5px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 input{
-    width: 200px;
-    height: 20px;
+    width: 300px;
+    height: 30px;
 
 }
 button{
@@ -34,26 +38,69 @@ button{
 button:hover{
     background-color: darkred;
     color: #fff;
+    transition: 0.5s;
 }
 header{
+    height: 170px;
     background-color: rgb(158, 0, 0);
     color: #fff;
+    display: flex;
 }
 header img{
-    border-radius: 1500px;
+    margin-top: 10px;
+    border-radius: 5000px;
+    height: 150px;
     width: 150px;
+    margin-left: 80px;
+}
+nav{
+    margin-top: 140px;
+    margin-left: 1000px;
+    display: flex;
+    gap: 10px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+}
+.postar{
+    margin-left: 87px;
+}
+footer{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(145, 19, 19);
+    color: #fff;
+    height: 40px;
 }
 
     </style>
 </head>
 <body>
-    <header>
+    <header> 
         <img src="aula/sherek.webp" alt="">
+        <nav>
+            <p>Nome:</p>
+            <a href="#">Eduarda rodrigues</a>
+            <p>Apelido:</p>
+            <a href="#">Dudinhalinda</a>
+    
+        </nav>
         
     </header>
+    <br>
+    <div class="postar">
     <input type="text" id="pensamento" placeholder="Escreva alguma coisa aqui...">
     <button onclick="postarFeed()">Postar</button>
+</div>
     <div id="resposta"></div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>    <br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <footer>
+    </footer>
     <!-- <script src="script.js"></script> -->
     <script src="script2.js"></script>
 </body>
