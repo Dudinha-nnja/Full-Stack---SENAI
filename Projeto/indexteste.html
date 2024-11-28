@@ -28,7 +28,7 @@ body{
     background: var(--white);
 }
 .navigation{
-  /*  background-color: var(--red);*/
+    background-color: var(--red);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -38,7 +38,7 @@ body{
     position: fixed;
 }
 .navigation .logo{
-    color: var(--red);
+    color: var(--white);
     font-size: 1.7rem;
     font-weight: 600;
 }
@@ -51,7 +51,7 @@ body{
     gap: 5rem;
 }
 .navigation ul li a{
-    color: var(--dark);
+    color: var(--white);
     font-size: 17px;
     font-weight: 500;
     transition: all 0.5s;
@@ -183,6 +183,20 @@ body{
     width: 500px;
     border-radius: 50%;
 }
+.ajuda{
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+.ajuda-text{
+    padding: 100px 2%;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    gap: 5rem;
+} 
     </style>
 </head>
 <body>
@@ -218,6 +232,14 @@ body{
                 <h4 class="text-4">Quem somos?</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quasi, omnis adipisci quas quaerat debitis assumenda fugit, illum temporibus perferendis deserunt praesentium dolorem excepturi placeat eaque sit voluptatum harum corporis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid, saepe et odio quia ut beatae ab nobis, ducimus atque minus reiciendis eos commodi soluta aliquam. Porro architecto error quo.</p>
             </div>
+        </section>
+        <section class="ajuda">
+            <div class="ajuda-text">
+                <h1>Como ajudar nossa ONG?</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aspernatur id natus sit, recusandae, hic at, non quisquam soluta accusantium exercitationem error eligendi tempore illum doloremque ut laborum officiis maxime!Lorem</p>
+                <img src="img/gege.png" alt="">
+            </div>
+
         </section>
     </main>
     <script src="script.js"></script>
