@@ -1,0 +1,22 @@
+<script>
+    // Script para carregar o header
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('INDEX.HTML')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            })
+            .catch(error => console.error('Erro ao carregar o header:', error));
+    });
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="header-container"></div>
+</body>
+</html>

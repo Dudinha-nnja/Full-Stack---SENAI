@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+        }
+        .navigation{
+            background-color: var(--red);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 40px;
+            box-shadow: 0 0.1rem 0.5rem #ccc;
+            width: 100%;
+            position: fixed;
+        }
+        .navigation .logo{
+            color: var(--white);
+            font-size: 1.7rem;
+            font-weight: 600;
+        }
+        /*.logo span{
+            /*color: var();
+        }*/
+        .navigation ul{
+            display: flex;
+            align-items: center;
+            gap: 5rem;
+        }
+        .navigation ul li a{
+            color: var(--white);
+            font-size: 17px;
+            font-weight: 500;
+            transition: all 0.5s;
+        }
+        .navigation ul li a:hover{
+            color: var(--red);
+        }
+        
+        .menu{
+            cursor: pointer;
+            display: none;
+        }
+        .menu .bar{
+            display: block;
+            width: 28px;
+            height: 3px;
+            border-radius: 3px;
+            background: var(--dark);
+            margin: 5px auto;
+            transition: all 0.3s;
+        }
+        .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: var(--white);
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin: 16px 0;
+    }
+        body{
+            background-color: black;
+            width: 100%;
+            height: 100hv;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            margin-top: 50px;
+            background-color: rgb(255, 255, 255);
+            width: 80%;
+            height: 80hv;
+            display: flex;
+            box-shadow: 5px 5px 10px black;
+        }
+        .form-img img{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+        .form{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+        }
+        .form-header{
+            margin-bottom: 3rem;
+            display: flex;
+            justify-content:space-between;
+        }
+        .login-button {
+            display: flex;
+            align-items: center;
+        }
+        .login-button button{
+            border: none;
+            padding: 0.4 1 rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-button button:hover{
+            background-color: rgb(210, 228, 47);
+        }
+        .login-button button a{
+            text-decoration: none;
+            font-weight: 500;
+            color: blanchedalmond;
+        }
+        .form-header h1::after{
+            content: '';
+            display: block;
+            width: 5rem;
+            height: 0.3rem;
+            margin: 0 auto;
+            position: absolute;
+            border-radius: 10px;
+            color: blueviolet;
+        }
+        .input-group{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 1rem 0;
+        }
+.input-box{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+.input-box input{
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+    font-size: 0.8rem;
+}
+.input-box input:hover{
+    background-color: rgb(227, 228, 182);
+}
+.input-box label, titulo-genero h6{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.input-box input::placeholder{
+    background-color: rgb(253, 249, 0);
+}
+.genero{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 .5rem;
+}
+.input-genero{
+    display: flex;
+    align-items: center;
+}
+.input-genero input{
+margin-right: 0.35rem;    
+}
+
+.input-genero label{
+    font-size: 0.81rem;
+    font-weight: 600;
+
+}
+.titulo-genero h6{
+    font-size: 15px;
+}
+.button button{
+    background-color: rgb(228, 171, 13);
+    width: 100%;
+    margin-top: 2.5rem;
+    border: none;
+    padding: 0.62;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+.button button:hover{
+    background-color: rgb(211, 226, 124);
+}
+.button button a{
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: rgb(255, 255, 244);
+}
+</style>
+</head>
+    <body>
+        <!-- <header>
+            <nav class="navigation">
+                <a href="img/gatinha (1).png" class="logo"><img src="img/gatinha (1).png" alt=""><span>        </span>V<span>ira</span>-L<span>atas</span></a>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#">Inicio</a></li>
+                    <li class="nav-item"><a href="#">Gatos</a></li>
+                    <li class="nav-item"><a href="#">Visitas</a></li>
+                    <li class="nav-item"><a href="#">Castrações</a></li>
+                </ul>
+              
+            </nav>
+        </header> -->
+    <div class="container">
+        <div class="form-img">
+            <img src="img/cat family-cuate.png" alt="Img formulario">
+        </div>
+        <div class="form">
+            <form action="">
+                <div class="form-header">
+                    <div class="titulo">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="login-button"><button>teste</button></div>
+                </div>
+
+                <div class="input-group">
+                    <div class="input-box">
+                        <label for="Nome"></label>
+                        <input id="nome" type="text" name="nome" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="sobrenome"></label>
+                        <input id="sobrenome" type="text" name="sobrenome" placeholder="Digite seu Sobrenome" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="amail"></label>
+                        <input id="email" type="text" name="email" placeholder="Digite seu E-mail" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="senha"></label>
+                        <input id="senha" type="senha" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="cell"></label>
+                        <input id="cell" type="cell" name="cell" placeholder="Digite seu numero de telefone" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="comfirma"></label>
+                        <input id="confirma" type="senha" name="confirma" placeholder="Confirme sua senha" required>
+                    </div>
+
+                </div>
+                <div class="genero">
+                    <div class="titulo-genero">
+                    <h6>genero</h6>               
+                    </div>
+                    <div class="input-genero">
+                        <input id="masculino" type="radio" nome="genero">
+                        <label for="masculino">Masculino</label>
+                    </div>
+                    <div class="input-genero">
+                        <input id="feminino" type="radio" nome="genero">
+                        <label for="feminino">Feminino</label>
+                    </div>
+                    <div class="input-genero">
+                        <input id="ind" type="radio" nome="genero">
+                        <label for="ind">Prefiro não dizer</label>
+                    </div>
+                </div>
+                <div class="button">
+                    <button><a href="">Continuar</a></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
