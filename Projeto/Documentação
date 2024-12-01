@@ -1,0 +1,54 @@
+Objetivo do Site:
+O objetivo do site da ONG Vira-Latas é fornecer uma plataforma onde os visitantes possam conhecer a organização, suas ações e como podem contribuir com o bem-estar dos gatos resgatados. O site também busca proporcionar informações essenciais sobre a localização da ONG, horários de funcionamento, formas de ajuda (doações, adoção responsável, etc.) e eventos relacionados à causa.
+
+Funcionalidades do Site:
+Página Inicial:
+
+Objetivo: Receber os visitantes com uma mensagem acolhedora e convidativa.
+Conteúdo: Título com um slogan como "Diversidade para todos!", uma breve explicação sobre a missão da ONG e um botão de ação para escolher como ajudar.
+Quem Somos:
+
+Objetivo: Apresentar a missão, visão e valores da ONG.
+Conteúdo: Descrição detalhada sobre a história da ONG, a importância de suas ações e como ela impacta a vida dos gatos resgatados.
+Como Ajudar:
+
+Objetivo: Informar os visitantes sobre as maneiras de ajudar a ONG, seja por meio de doações financeiras ou itens para os gatos.
+Conteúdo: Detalhamento de como as pessoas podem fazer doações (dinheiro ou itens) e exemplos de como isso ajuda diretamente os gatos resgatados.
+Localização:
+
+Objetivo: Informar os visitantes sobre a localização da ONG e como chegar até lá.
+Conteúdo:
+Endereço completo e mapa interativo (Google Maps).
+Horários de funcionamento.
+Meios de transporte público e estacionamento.
+Pontos de referência próximos.
+Informações de contato, caso alguém tenha dúvidas.
+Contato:
+
+Objetivo: Proporcionar aos visitantes formas de entrar em contato com a ONG para mais informações, dúvidas ou agendamentos.
+Conteúdo: Formulário de contato e links para redes sociais, WhatsApp e e-mail.
+Documentação do Código HTML/CSS:
+Estrutura do Site:
+<header>: Área onde o conteúdo do cabeçalho do site será carregado dinamicamente através de um arquivo externo (header.html). Contém a navegação e links importantes.
+
+<section class="home">:
+
+Objetivo: Exibe uma saudação e uma breve introdução sobre a ONG, com um botão para convidar o visitante a saber mais.
+<section class="somos">:
+
+Objetivo: Descreve a missão e valores da ONG, com um texto explicativo e uma imagem representativa.
+<section class="loca">:
+
+Objetivo: Apresenta a localização da ONG com o mapa interativo (Google Maps) e informações sobre como chegar, horários e formas de transporte.
+<footer>: Área de rodapé, geralmente com informações sobre direitos autorais ou links para políticas da ONG.
+
+Estilização CSS:
+Estilo responsivo: O layout do site é adaptável a diferentes tamanhos de tela. As seções principais possuem estilos específicos para telas maiores e menores, com a modificação de tamanhos de fonte e imagens para garantir boa visualização em dispositivos móveis.
+
+Imagens e Ícones: Uso de imagens personalizadas como logotipo e ícones de redes sociais para tornar o site visualmente mais atraente. Também há animações de hover em botões para uma interação mais dinâmica.
+
+Tecnologias Utilizadas:
+HTML5: Marcações de estrutura e conteúdo.
+CSS: Estilização do layout e responsividade.
+JavaScript: Script simples para carregar dinamicamente o cabeçalho e alertar o usuário sobre o zoom da página.
+Google Maps Embed API: Utilizada para embutir o mapa interativo.

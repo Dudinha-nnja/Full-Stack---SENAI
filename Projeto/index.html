@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/gatinha (4).png" type="image/x-icon">
+
     <title>Vira-Latas</title>
     <style>
    
@@ -34,6 +36,8 @@
     margin-bottom: 4rem;
 }
 .home-btn{
+    cursor: url('img/patahover.png'), auto;
+       
     padding: 15px 45px;
     background: var(--red);
     color: var(--white);
@@ -45,7 +49,10 @@
     background: #fc4c35;
 }
 .home-img img{
-    width: 100%;
+    display: flex;
+    margin-top: 100px;
+
+    width: 700px;
 }
 @media (max-width:785px) {
     .navigation{
@@ -137,7 +144,7 @@
     gap: 5rem;
 } 
 .home{
-    background-image: url(img/fundo.png);
+    background-image: url(img/cansei.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -151,6 +158,66 @@ section .somos{
     background-repeat: no-repeat;
     background-size: cover;
 
+}
+footer{
+    background-color: var(--red);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 20px;
+height: 50px;
+}
+.ajuda img{
+    width: 80%;
+    margin-left: 10%;
+}
+.loca{
+    background-image: url(img/fundo8.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+.info-box {
+    height: 70%;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.5rem;
+}
+
+.info-box p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.info-box strong {
+    color: var(--red);
+}
+
+@media (max-width: 768px) {
+    .loca {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .loca-text {
+        max-width: 100%;
+    }
+
+    .info-box {
+        margin: 0 auto;
+    }
+
+    .loca-img iframe {
+        max-width: 100%;
+    }
 }
     </style>
     
@@ -167,9 +234,9 @@ section .somos{
                 <p>Vira-Latas – porque todo gato merece um final feliz.</p>
                 <a href="#" class="home-btn">escolher</a>
             </div>
-            <div class="home-img">
-                <img src="img/gege.png" alt="hamburguer">
-            </div>
+            <!-- <div class="home-img">
+                <img src="img/acaba.png" alt="img principal ">
+            </div> -->
         </section>
         <section class="somos">
             <div class="quemsomos-img">
@@ -183,21 +250,44 @@ section .somos{
                     Com amor e dedicação, trabalhamos para transformar vidas e oferecer uma segunda chance a esses animais incríveis. Junte-se a nós nessa missão e ajude a construir um futuro melhor para nossos amigos felinos!</p>
             </div>
         </section>
+        <section class="loca">
+                <div class="loca-img">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122891.369375095!2d-48.36911304651447!3d-15.732332943825325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bb8f0f9cf13df%3A0x85d1886146dc5a99!2zw4FndWFzIExpbmRhcyBkZSBHb2nDoXMsIEdP!5e0!3m2!1spt-BR!2sbr!4v1733023737527!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
+                <div class="loca-text">
+                    <div class="info-box">
+                        <h1>Nossa localização</h1>
+<br>
+                        <p><strong>Endereço:</strong> Rua Felina, 123 - Águas Lindas de Goiás, GO.</p><br>
+                        <p><strong>Horário de funcionamento:</strong> Segunda a sábado, das 8h às 18h.</p><br>
+                        <p><strong>Contato:</strong> (61) 99999-9999.</p><br>
+                        <p>Atenção, na hora de fazer o agendamento da visita, certifique-se que <br> iremos estar funcionando.</p><br>
+                        <p>Caso alguém precise de informações rápidas sobre localização mande mensagem <br> pelo whatsApp.</p><br>
+                    </div>
+            </div>
+        </section>
         <section class="ajuda">
             <div class="ajuda-text">
-                <h1>Como Você Pode Ajudar Nossa ONG Vira-Latas?</h1>
+                <!-- <h1>Como Você Pode Ajudar Nossa ONG Vira-Latas?</h1>
                 <p>A nossa ONG está constantemente em busca de maneiras de garantir o bem-estar dos gatos que acolhemos. Sabemos que muitas vezes, a melhor forma de ajudar é através de doações, seja em dinheiro ou em itens essenciais para o cuidado dos nossos felinos.</p>
                 <h3>1. Doações em Dinheiro:</h3>
-                <p>Através de contribuições financeiras, podemos cobrir despesas com alimentação, cuidados veterinários, vacinação, castração e melhorias nas instalações. Sua ajuda financeira permite que nossa ONG continue a dar apoio a mais animais e garantir que recebam o carinho e atenção que merecem.</p>
-                <h5>Você pode fazer sua doação diretamente através do PIX para o e-mail:
-                Xanin.oliveira@gmail.com</h5>
-                <h3>2. Doação de Ração e Itens de Gato:</h3>
-                <p>Se você tem ração, brinquedos, caminhas, arranhadores ou outros itens para gatos em bom estado, sua doação será de grande valia para ajudar nossos animais a se sentirem mais confortáveis e cuidados enquanto aguardam um lar definitivo. Toda contribuição, mesmo que pequena, faz uma grande diferença no dia a dia dos nossos felinos.</p>
-            </div>
-
+                <p>Ajude-nos a cobrir custos com alimentação, cuidados veterinários e castrações. </p>
+                <h5>Faça sua doação pelo PIX: Xanin.oliveira@gmail.com.</h5>
+                <h3>2. Doação de Itens:</h3>
+                <p>Ração, brinquedos, caminhas ou arranhadores em bom estado são sempre bem-vindos e ajudam nossos gatos a aguardarem um lar com mais conforto.</p>
+          -->  </div> 
+<img src="img/imgfim.png" alt="">
         </section>
     </main>
+
+    <footer> 
+        <br>
+        Todos os direitos possiveis
+    </footer>
     <script>
+        window.onload = function() {
+            alert("Utilize o zoom da pagina em 80%, por favor.");
+        }
   // Script para carregar o header
   document.addEventListener('DOMContentLoaded', function() {
     fetch('header.html')
