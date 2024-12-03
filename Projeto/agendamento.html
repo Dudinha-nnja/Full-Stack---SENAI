@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulários em sequência</title>
+    <title>Formulários de agendamento de visitas</title>
     <link rel="icon" href="img/gatinha (4).png" type="image/x-icon">
 
     <style>
@@ -66,12 +67,21 @@
             font-weight: 600;
             color: #333;
             margin-bottom: 0.5rem;
+            cursor: url('img/pata.png'), auto;
+
+            
+        }
+        .input-box option{
+            cursor: url('img/patahover.png'), auto;
+
         }
         .input-box input, .input-box select {
             padding: 0.8rem 1rem;
             border: 1px solid #ccc;
             border-radius: 5px;
             font-size: 16px;
+            cursor: url('img/patahover.png'), auto;
+
         }
         button {
             width: 100%;
@@ -94,7 +104,7 @@
             margin-left: 35%;
             display: flex;
             flex-direction: column;
-            background-color: #f9f9f9;
+            background-color: #fffeb7;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
@@ -106,7 +116,7 @@
             margin-bottom: 1.5rem;
             text-align: center;
             font-size: 24px;
-            color: #6c63ff;
+            color: #ffffff;
         }
         .summary p {
             margin: 0.5rem 0;
@@ -118,59 +128,7 @@
             color: #555;
         }
         /*header*/
-        .navigation{
-            background-color: var(--red);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px 40px;
-            box-shadow: 0 0.1rem 0.5rem #ccc;
-            width: 100%;
-            position: fixed;
-                        text-decoration: none;
-
-        }
-        .navigation .logo{
-            color: var(--white);
-            font-size: 1.7rem;
-            font-weight: 600;
-            text-decoration: none;
-
-        }
-        /*.logo span{
-            /*color: var();
-        }*/
-        .navigation ul{
-            display: flex;
-            align-items: center;
-            gap: 5rem;
-            text-decoration: none;
-        }
-        .navigation ul li a{
-            color: var(--white);
-            font-size: 17px;
-            font-weight: 500;
-            transition: all 0.5s;
-            text-decoration: none;
-
-        }
-        .navigation ul li a:hover{
-            color: var(--red);
-        }
-        
-        .menu{
-            cursor: pointer;
-            display: none;
-        }
-        .menu .bar{
-            display: block;
-            width: 28px;
-            height: 3px;
-            border-radius: 3px;
-            background: var(--dark);
-            margin: 5px auto;
-            transition: all 0.3s;
-        }
+       
         footer{
             background-color: var(--red);
             color: rgb(255, 255, 255);
@@ -186,7 +144,6 @@
     <div id="header-container"></div>
     <br><br><br><br><br><br><br><br><br>
     <div class="container">
-        <!-- Primeiro formulário -->
         <div class="form" id="form1">
             <form id="firstForm">
                 <div class="form-header">
@@ -230,7 +187,6 @@
             </form>
         </div>
 
-        <!-- Segundo formulário -->
         <div class="form" id="form2" style="display: none;">
             <form id="secondForm">
                 <div class="form-header">

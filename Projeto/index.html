@@ -114,10 +114,13 @@
     justify-content: space-between;
     padding: 0px 10%;
 }
+.quemsomos-text h1{
+    color: #fc4c35;
+}
 .quemsomos-text{
     padding: 100px 2%;
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
     gap: 5rem;
     font-size: 20px;
@@ -125,8 +128,13 @@
 .quemsomos-img img{
     width: 400px;
 }
+/*.somos .quemsomos-text{
+    background-image: url(img/fundo2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 .somos .quemsomos-img img{
-    width: 300px;
+    width: 400px;
     margin-right: 20px;
 }
 .ajuda{
@@ -143,8 +151,13 @@
     overflow: hidden;
     gap: 5rem;
 } 
+.ajuda-text h1{
+    font-size: 40px;
+    color: #000000;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
 .home{
-    background-image: url(img/cansei.png);
+    background-image: url(img/Brown\ Illustrative\ Abstract\ Group\ Project\ Presentation\ \(2\).png);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -168,7 +181,7 @@ height: 50px;
 }
 .ajuda img{
     width: 80%;
-    margin-left: 10%;
+    border-radius: 30px;
 }
 .loca{
     background-image: url(img/fundo8.png);
@@ -182,9 +195,9 @@ height: 50px;
     padding: 0px 10%;
 }
 .info-box {
-    height: 70%;
+    height: 100%;
     padding: 1.5rem;
-    background-color: #ffffff;
+    background-color: #feffaf;
     border: 2px solid #e0e0e0;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -219,6 +232,33 @@ height: 50px;
         max-width: 100%;
     }
 }
+.info-box p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    color: #333333;
+}
+
+.info-box i {
+    font-size: 1.2rem;
+    color: var(--red);
+}
+
+.titulo h1 {
+    font-size: 2rem;
+    color: var(--red);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.loca .mapa{
+    border-radius: 30px;
+    display: flex;
+    background-color: #ffffff;
+    width: 1500px;
+    
+}
+
     </style>
     
 </head>
@@ -232,7 +272,7 @@ height: 50px;
                 <h4 class="text-h4">Seja bem vindo ao nosso site de ajuda!</h4>
                 <h1 class="text-h1">Diversidade para todos!</h1>
                 <p>Vira-Latas – porque todo gato merece um final feliz.</p>
-                <a href="#" class="home-btn">escolher</a>
+                <a href="#" class="home-btn">Adotar</a>
             </div>
             <!-- <div class="home-img">
                 <img src="img/acaba.png" alt="img principal ">
@@ -251,31 +291,32 @@ height: 50px;
             </div>
         </section>
         <section class="loca">
-                <div class="loca-img">
-
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122891.369375095!2d-48.36911304651447!3d-15.732332943825325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bb8f0f9cf13df%3A0x85d1886146dc5a99!2zw4FndWFzIExpbmRhcyBkZSBHb2nDoXMsIEdP!5e0!3m2!1spt-BR!2sbr!4v1733023737527!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </div>
-                <div class="loca-text">
-                    <div class="info-box">
-                        <h1>Nossa localização</h1>
-<br>
-                        <p><strong>Endereço:</strong> Rua Felina, 123 - Águas Lindas de Goiás, GO.</p><br>
-                        <p><strong>Horário de funcionamento:</strong> Segunda a sábado, das 8h às 18h.</p><br>
-                        <p><strong>Contato:</strong> (61) 99999-9999.</p><br>
-                        <p>Atenção, na hora de fazer o agendamento da visita, certifique-se que <br> iremos estar funcionando.</p><br>
-                        <p>Caso alguém precise de informações rápidas sobre localização mande mensagem <br> pelo whatsApp.</p><br>
-                    </div>
+            <div class="mapa">
+            <div class="loca-img">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122891.26019201215!2d-48.286710400000004!3d-15.73251365!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bb8f0f9cf13df%3A0x85d1886146dc5a99!2zw4FndWFzIExpbmRhcyBkZSBHb2nDoXMsIEdP!5e0!3m2!1spt-BR!2sbr!4v1733188280924!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            <div class="loca-text">
+                <div class="info-box"><br>
+                    <h1><i class='bx bxs-cat'></i> Nossa localização</h1>
+                    <br>
+                    <p><i class='bx bx-map'></i> <strong>Endereço:</strong> Rua Felina, 123 - Águas Lindas de Goiás, GO.</p><br>
+                    <p><i class='bx bx-time'></i> <strong>Horário de funcionamento:</strong> Segunda a sábado, das 8h às 18h.</p><br>
+                    <p><i class='bx bx-phone'></i> <strong>Contato:</strong> (61) 99999-9999.</p><br>
+                    <p><i class='bx bxs-message-rounded-dots'></i> Atenção, na hora de fazer o agendamento da visita, certifique-se de que estaremos funcionando.</p><br>
+                    <p><i class='bx bxl-whatsapp'></i> Caso alguém precise de informações rápidas, mande mensagem pelo WhatsApp.</p>
+                </div>
             </div>
-        </section>
+        </div>
+        </section>        
         <section class="ajuda">
             <div class="ajuda-text">
-                <!-- <h1>Como Você Pode Ajudar Nossa ONG Vira-Latas?</h1>
-                <p>A nossa ONG está constantemente em busca de maneiras de garantir o bem-estar dos gatos que acolhemos. Sabemos que muitas vezes, a melhor forma de ajudar é através de doações, seja em dinheiro ou em itens essenciais para o cuidado dos nossos felinos.</p>
-                <h3>1. Doações em Dinheiro:</h3>
+                <h1>Como Você Pode Ajudar Nossa ONG Vira-Latas?</h1>
+                <br>
+                <!-- <h3>1. Doações em Dinheiro:</h3>
                 <p>Ajude-nos a cobrir custos com alimentação, cuidados veterinários e castrações. </p>
                 <h5>Faça sua doação pelo PIX: Xanin.oliveira@gmail.com.</h5>
                 <h3>2. Doação de Itens:</h3>
                 <p>Ração, brinquedos, caminhas ou arranhadores em bom estado são sempre bem-vindos e ajudam nossos gatos a aguardarem um lar com mais conforto.</p>
-          -->  </div> 
+           </div>  -->
 <img src="img/imgfim.png" alt="">
         </section>
     </main>

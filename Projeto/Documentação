@@ -28,22 +28,9 @@ Contato:
 Objetivo: Proporcionar aos visitantes formas de entrar em contato com a ONG para mais informações, dúvidas ou agendamentos.
 Conteúdo: Formulário de contato e links para redes sociais, WhatsApp e e-mail.
 Documentação do Código HTML/CSS:
-Estrutura do Site:
-<header>: Área onde o conteúdo do cabeçalho do site será carregado dinamicamente através de um arquivo externo (header.html). Contém a navegação e links importantes.
-
-<section class="home">:
-
-Objetivo: Exibe uma saudação e uma breve introdução sobre a ONG, com um botão para convidar o visitante a saber mais.
-<section class="somos">:
-
-Objetivo: Descreve a missão e valores da ONG, com um texto explicativo e uma imagem representativa.
-<section class="loca">:
 
 Objetivo: Apresenta a localização da ONG com o mapa interativo (Google Maps) e informações sobre como chegar, horários e formas de transporte.
 <footer>: Área de rodapé, geralmente com informações sobre direitos autorais ou links para políticas da ONG.
-
-Estilização CSS:
-Estilo responsivo: O layout do site é adaptável a diferentes tamanhos de tela. As seções principais possuem estilos específicos para telas maiores e menores, com a modificação de tamanhos de fonte e imagens para garantir boa visualização em dispositivos móveis.
 
 Imagens e Ícones: Uso de imagens personalizadas como logotipo e ícones de redes sociais para tornar o site visualmente mais atraente. Também há animações de hover em botões para uma interação mais dinâmica.
 
@@ -52,3 +39,9 @@ HTML5: Marcações de estrutura e conteúdo.
 CSS: Estilização do layout e responsividade.
 JavaScript: Script simples para carregar dinamicamente o cabeçalho e alertar o usuário sobre o zoom da página.
 Google Maps Embed API: Utilizada para embutir o mapa interativo.
+
+Requisitos de Acessibilidade e Usabilidade:
+Navegação intuitiva: O site deve ser fácil de navegar, com menus e botões claramente identificáveis.
+Compatibilidade com dispositivos móveis: O design responsivo garante que o site seja acessível em smartphones e tablets.
+Acessibilidade: Todos os elementos devem ser legíveis e interativos para pessoas com deficiência visual, utilizando contrastes adequados e textos alternativos para imagens.
+Interatividade: Inclusão de formulários de contato e botões de ação para facilitar a interação com os visitantes.
