@@ -15,6 +15,9 @@ lista_categorias.push(new Categoria('REFRIGERANTE','img/images.jfif','Refrigeran
 lista_categorias.push(new Categoria('REFRIGERANTE','img/images.jfif','Refrigerante top :)','refri feito por @Marca'))
 lista_categorias.push(new Categoria('REFRIGERANTE','img/images.jfif','Refrigerante top :)','refri feito por @Marca'))
 lista_categorias.push(new Categoria('REFRIGERANTE','img/images.jfif','Refrigerante top :)','refri feito por @Marca'))
+lista_categorias.push(new Categoria('REFRIGERANTE','img/images.jfif','Refrigerante top :)','refri feito por @Marca'))
+lista_categorias.push(new Categoria('REFRIGERANTE','img/images.jfif','Refrigerante top :)','refri feito por @Marca'))
+
 
 lista_categorias.forEach(categoria => {
     document.querySelector('#categoriaItems').innerHTML += `
