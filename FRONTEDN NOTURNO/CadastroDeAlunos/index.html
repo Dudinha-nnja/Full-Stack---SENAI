@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Alunos - Universidade</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #0072ff;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        input {
+            margin: 10px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        input:focus {
+            border-color: #0072ff;
+            outline: none;
+        }
+        
+        button {
+            padding: 15px;
+            background-color: #0072ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: #005bb5;
+        }
+        
+        #alunosList {
+            margin-top: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #0072ff;
+            color: white;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0072ff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Alunos</h1>
+        <form id="alunoForm">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="number" id="idade" placeholder="Idade" min="18" required>
+            <input type="text" id="curso" placeholder="Curso Desejado" required>
+            <input type="text" id="emails" placeholder="Emails (separados por vírgula)" required>
+            <button type="submit">Cadastrar Aluno</button>
+        </form>
+        <div id="alunosList"></div>
+    </div>
+    <script>
+        // Array de alunos (inicialmente vazio)
+let alunos = JSON.parse(localStorage.getItem('alunos')) || [];
+
+// Função para cadastrar um novo aluno
+document.getElementById('alunoForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio do formulário
+
+    const nome = document.getElementById('nome').value;
+    const idade = document.getElementById('idade').value;
+    const curso = document.getElementById('curso').value;
+    const emails = document.getElementById('emails').value;
+
+    const novoAluno = { nome, idade, curso, emails };
+    alunos.push(novoAluno);
+
+    // Salva os alunos no localStorage
+    localStorage.setItem('alunos', JSON.stringify(alunos));
+
+    // Redireciona para a página de lista
+    // window.location.href = 'lista_alunos.html';
+    window.open('lista_alunos.html', '_blank');
+});
+    </script>
+</body>
+</html>

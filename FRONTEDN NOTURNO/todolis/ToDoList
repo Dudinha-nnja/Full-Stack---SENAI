@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List Avançado</title>
+<style>/* Estilos globais */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Arial', sans-serif;
+      background: url('<https://www.toptal.com/designers/subtlepatterns/patterns/purty_wood.png>');
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    
+    header {
+      background-color: #2d2d2d;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 300;
+    }
+    
+    .btn-primary {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .btn-primary:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Board - Layout das colunas */
+    .board {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 20px auto;
+      gap: 20px;
+    }
+    
+    .coluna {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+      width: 24%;
+    }
+    
+    .coluna h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      font-weight: 300;
+    }
+    
+    /* Lista de tarefas */
+    .lista-tarefas {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .lista-tarefas li {
+      background-color: #f5f5f5;
+      margin-bottom: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .lista-tarefas li:hover {
+      background-color: #f0f0f0;
+    }
+    
+    button.mover-tarefa {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button.mover-tarefa:hover {
+      background-color: #0056b3;
+    }
+    
+    /* Modal para adicionar tarefas */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .modal-content {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 400px;
+      text-align: center;
+    }
+    
+    .modal-content input {
+      width: 80%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    .modal-content button {
+      width: 100%;
+    }
+    
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: red;
+    }
+    
+    footer {
+      background-color: #2d2d2d;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+    }</style>  
+    <script src="<https://kit.fontawesome.com/a076d05399.js>" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Gerenciador de Tarefas - Estilo Trello</h1>
+    <!-- Botão para abrir o modal de nova tarefa -->
+    <button id="abrir-modal" class="btn-primary"><i class="fas fa-plus"></i> Nova Tarefa</button>
+  </header>
+
+  <!-- Modal para Adicionar Tarefa -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Adicionar Nova Tarefa</h2>
+      <input type="text" id="nova-tarefa" placeholder="Digite sua tarefa...">
+      <button id="adicionar-tarefa" class="btn-primary">Adicionar</button>
+    </div>
+  </div>
+
+  <!-- Contêiner principal para as colunas -->
+  <div class="board">
+    <!-- Coluna para Tarefas Pendentes -->
+    <div class="coluna">
+      <h2>Lista</h2>
+      <ul id="tarefas-pendentes" class="lista-tarefas"></ul>
+    </div>
+
+    <!-- Coluna para Tarefas em Andamento -->
+    <div class="coluna">
+      <h2>Em Progresso</h2>
+      <ul id="tarefas-andamento" class="lista-tarefas"></ul>
+    </div>
+
+    <!-- Coluna para Tarefas em Progresso -->
+    <div class="coluna">
+      <h2>Em revisão</h2>
+      <ul id="tarefas-progresso" class="lista-tarefas"></ul>
+    </div>
+
+    <!-- Coluna para Tarefas Concluídas -->
+    <div class="coluna">
+      <h2>Concluída</h2>
+      <ul id="tarefas-concluidas" class="lista-tarefas"></ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Feito com 💻 por [Seu Nome]</p>
+  </footer>
+
+  <!-- Script JS -->
+  <script>
+    // Referências ao DOM (Document Object Model) - Pegamos elementos da página HTML para manipular
+const modal = document.getElementById('modal'); // O modal que aparece para adicionar tarefas
+const btnAbrirModal = document.getElementById('abrir-modal'); // Botão que abre o modal
+const btnFecharModal = document.querySelector('.close'); // Botão de fechar o modal (o "X")
+const inputTarefa = document.getElementById('nova-tarefa'); // Campo de input para digitar o nome da nova tarefa
+const btnAdicionarTarefa = document.getElementById('adicionar-tarefa'); // Botão para adicionar a tarefa
+
+// Listas de tarefas para cada fase: pendente, andamento, progresso e concluída
+const listaPendentes = document.getElementById('tarefas-pendentes');
+const listaAndamento = document.getElementById('tarefas-andamento');
+const listaProgresso = document.getElementById('tarefas-progresso');
+const listaConcluidas = document.getElementById('tarefas-concluidas');
+
+// Abre o modal quando o botão "Nova Tarefa" é clicado
+btnAbrirModal.addEventListener('click', function () {
+  modal.style.display = 'flex'; // O modal se torna visível
+});
+
+// Fecha o modal quando o botão "X" (fechar) é clicado
+btnFecharModal.addEventListener('click', function () {
+  modal.style.display = 'none'; // O modal é escondido
+});
+
+// Adiciona uma tarefa à lista de "Pendentes" quando o botão "Adicionar" é clicado
+btnAdicionarTarefa.addEventListener('click', function () {
+  const tarefaTexto = inputTarefa.value; // Pega o valor digitado no input (nome da tarefa)
+
+  if (tarefaTexto === '') {
+    // Verifica se o campo está vazio
+    alert('Digite uma tarefa!'); // Mostra um alerta caso o campo esteja vazio
+    return; // Interrompe a função se o campo estiver vazio
+  }
+
+  adicionarTarefa(listaPendentes, tarefaTexto); // Chama a função para adicionar a tarefa à lista de pendentes
+  inputTarefa.value = ''; // Limpa o campo de input após adicionar a tarefa
+  modal.style.display = 'none'; // Fecha o modal após adicionar a tarefa
+});
+
+// Função que adiciona uma tarefa à lista especificada (neste caso, pendentes)
+function adicionarTarefa(lista, texto) {
+  const novaTarefa = document.createElement('li'); // Cria um novo elemento <li> (um item de lista)
+  novaTarefa.innerText = texto; // Define o texto do item como o valor digitado no input
+
+  // Cria um botão para mover a tarefa entre as colunas
+  const btnMover = document.createElement('button');
+  btnMover.classList.add('mover-tarefa'); // Adiciona uma classe CSS para estilizar o botão
+  btnMover.innerText = 'Mover'; // O texto do botão será "Mover"
+
+  // Evento que será chamado quando o botão "Mover" for clicado
+  btnMover.addEventListener('click', function () {
+    moverTarefa(novaTarefa); // Chama a função de mover a tarefa para outra lista
+  });
+
+  novaTarefa.appendChild(btnMover); // Adiciona o botão "Mover" dentro da nova tarefa
+  lista.appendChild(novaTarefa); // Adiciona a nova tarefa à lista específica (pendentes, andamento, etc.)
+}
+
+// Função que move uma tarefa entre as colunas
+function moverTarefa(tarefa) {
+  // Verifica qual lista a tarefa pertence e move para a próxima lista
+  if (tarefa.parentElement === listaPendentes) {
+    listaAndamento.appendChild(tarefa); // Move a tarefa de "Pendentes" para "Em Andamento"
+  } else if (tarefa.parentElement === listaAndamento) {
+    listaProgresso.appendChild(tarefa); // Move de "Em Andamento" para "Em Progresso"
+  } else if (tarefa.parentElement === listaProgresso) {
+    listaConcluidas.appendChild(tarefa); // Move de "Em Progresso" para "Concluídas"
+    tarefa.removeChild(tarefa.querySelector('button')); // Remove o botão "Mover" quando a tarefa estiver concluída
+  }
+}
+
+// Fecha o modal se o usuário clicar fora da área do modal (na tela escura)
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = 'none'; // Fecha o modal ao clicar fora dele
+  }
+};
+  </script>
+
+</body>
+</html>

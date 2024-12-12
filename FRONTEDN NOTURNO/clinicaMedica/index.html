@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<!-- Declaração do tipo de documento e idioma do conteúdo -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Faz com que o layout da página seja responsivo em dispositivos móveis -->
+    <title>Clínica Médica Saúde & Vida</title>
+    <!-- Define o título da página, que aparece na aba do navegador -->
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        section {
+            margin: 20px 0;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        table {
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        marquee {
+            background-color: #f9c74f;
+            color: #000;
+            padding: 10px;
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        mark {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Corpo do documento, onde todo o conteúdo visível é colocado -->
+
+    <!-- Cabeçalho do site -->
+    <header>
+        <h1>Clínica Médica Saúde & Vida</h1>
+        <!-- Título principal da clínica -->
+        <p><mark>Bem-vindo à nossa clínica, onde sua saúde é nossa prioridade!</mark></p>
+        <!-- Texto de boas-vindas ou slogan -->
+    </header>
+
+    <!-- Seção com uma imagem de destaque -->
+    <section>
+        <img src="imagem_clinica.jpg" alt="Imagem da fachada da Clínica Médica Saúde & Vida">
+        <!-- Imagem representando a clínica, com uma descrição alternativa -->
+    </section>
+
+    <!-- Navegação do site com links para as seções -->
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <!-- Link para a seção "Sobre Nós" -->
+            <li><a href="#servicos">Serviços</a></li>
+            <!-- Link para a seção "Serviços" -->
+            <li><a href="#equipe">Equipe Médica</a></li>
+            <!-- Link para a seção "Equipe Médica" -->
+            <li><a href="#contato">Contato</a></li>
+            <!-- Link para a seção "Contato" -->
+        </ul>
+    </nav>
+
+    <!-- Seção que apresenta informações sobre a clínica -->
+    <section id="sobre">
+        <h2>Sobre Nós</h2>
+        <!-- Título da seção "Sobre Nós" -->
+        <p><mark>A Clínica Médica Saúde & Vida</mark> oferece atendimento especializado em diversas áreas da saúde, garantindo qualidade e bem-estar a nossos pacientes.</p>
+        <!-- Parágrafo descrevendo a clínica -->
+    </section>
+
+    <!-- Seção que lista os serviços oferecidos -->
+    <section id="servicos">
+        <h2>Serviços</h2>
+        <!-- Título da seção "Serviços" -->
+        <ul>
+            <li>Consultas Médicas</li>
+            <li>Exames Laboratoriais</li>
+            <li><mark>Fisioterapia</mark></li>
+            <li>Atendimento Psicológico</li>
+            <li>Cardiologia</li>
+            <!-- Lista de serviços oferecidos pela clínica -->
+        </ul>
+    </section>
+
+    <!-- Seção que apresenta a equipe médica -->
+    <section id="equipe">
+        <h2>Equipe Médica</h2>
+        <!-- Título da seção "Equipe Médica" -->
+        <p>Conheça os especialistas que compõem nossa equipe:</p>
+        <!-- Introdução à lista de especialistas -->
+        <ol>
+            <li>Dr. João Silva - Cardiologista</li>
+            <li>Dra. Maria Oliveira - Psicóloga</li>
+            <li>Dr. Pedro Santos - Ortopedista</li>
+            <li>Dra. Ana Costa - Clínica Geral</li>
+            <!-- Lista ordenada de médicos da equipe -->
+        </ol>
+    </section>
+
+    <!-- Seção que apresenta os horários de atendimento da clínica -->
+    <section>
+        <h2>Horários de Atendimento</h2>
+        <!-- Título da seção "Horários de Atendimento" -->
+        <table border="1">
+            <!-- Criação de uma tabela para os horários -->
+            <thead>
+                <tr>
+                    <th>Dia da Semana</th>
+                    <th>Horário</th>
+                    <!-- Cabeçalhos da tabela para os dias e horários -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Segunda a Sexta</td>
+                    <td>08:00 - 18:00</td>
+                    <!-- Linha da tabela indicando o horário de funcionamento durante a semana -->
+                </tr>
+                <tr>
+                    <td>Sábado</td>
+                    <td>08:00 - 12:00</td>
+                    <!-- Linha da tabela indicando o horário de funcionamento aos sábados -->
+                </tr>
+                <tr>
+                    <td>Domingo</td>
+                    <td>Fechado</td>
+                    <!-- Linha da tabela indicando que a clínica está fechada aos domingos -->
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Seção de contato com informações para os pacientes -->
+    <section id="contato">
+        <h2>Contato</h2>
+        <!-- Título da seção "Contato" -->
+        <p>Para agendar sua consulta ou obter mais informações, entre em contato conosco:</p>
+        <!-- Parágrafo com instruções para contato -->
+        <ul>
+            <li>Telefone: (61) 1234-5678</li>
+            <li>Email: <a href="contato@saudevida.com">contato@saudevida.com</a></li>
+            <!-- Link de email para contato -->
+            <li>Endereço: Rua das Flores, 123, Brasília - DF</li>
+            <!-- Endereço físico da clínica -->
+        </ul>
+    </section>
+
+    <!-- Rodapé do site -->
+    <footer>
+        <p>&copy; 2024 Clínica Médica Saúde & Vida. Todos os direitos reservados.</p>
+        <!-- Declaração de direitos autorais -->
+    </footer>
+
+    <!-- Marquee com promoções -->
+    <marquee behavior="scroll" direction="left">Promoção Especial: Agende sua consulta com 20% de desconto!</marquee>
+</body>
+
+</html>

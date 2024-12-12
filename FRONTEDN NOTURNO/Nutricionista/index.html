@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutricionista</title>
+    <link rel="icon" href="https://example.com/favicon.ico" type="image/x-icon">
+<style>
+    
+/* Estilos Globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+h2 {
+    color: #4b0082;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* Navbar */
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    background-color: #4b0082;
+    padding: 15px;
+}
+
+.navbar ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #dda0dd;
+    transition: color 0.3s ease;
+}
+
+/* Flip de Slides */
+.banner-slider {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.banner-slider .slide {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ícones de Serviços */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.service-item {
+    text-align: center;
+}
+
+.service-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+    transform: scale(1.1);
+}
+
+/* Grid Sobre Nós */
+.about-grid {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    align-items: center;
+}
+
+.about-img img {
+    width: 300px;
+    height: auto;
+    margin-right: 40px;
+    opacity: 0;
+    animation: fadein 1s forwards;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+}
+
+/* Especialidades */
+.specialties {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.specialty-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.specialty-item p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Vídeo */
+#video {
+    padding: 50px 0;
+}
+
+#video iframe {
+    max-width: 100%;
+}
+
+/* Calculadora IMC */
+.imc-calculator {
+    padding: 50px 0;
+}
+
+.imc-calculator input {
+    margin: 10px 0;
+    padding: 5px;
+}
+
+.imc-calculator button {
+    padding: 10px 20px;
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.imc-calculator button:hover {
+    background-color: #6a0dad;
+}
+
+/* Footer */
+footer {
+    background-color: #4b0082;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.footer-column {
+    width: 30%;
+}
+
+.footer-column form input {
+    padding: 10px;
+    width: 80%;
+}
+
+.footer-column form button {
+    padding: 10px;
+    background-color: #dda0dd;
+    border: none;
+    cursor: pointer;
+}
+
+.footer-column form button:hover {
+    background-color: #6a0dad;
+    transition: background-color 0.3s ease;
+}
+
+</style></head>
+<body>
+    <!-- Header com Navbar Responsiva -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#imc">IMC</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Flip de Slides com Banners -->
+    <section id="inicio" class="banner-slider">
+        <div class="slide">
+            <img src="https://via.placeholder.com/1920x600/4b0082/ffffff?text=Nutrição+e+Bem-Estar" alt="Banner 1">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1920x600/6a0dad/ffffff?text=Cuidados+com+a+Saúde" alt="Banner 2">
+        </div>
+        <div class="slide">
+            <img src="https://via.placeholder.com/1920x600/8a2be2/ffffff?text=Especialista+em+Nutrição" alt="Banner 3">
+        </div>
+    </section>
+
+    <!-- Ícones como círculos para Navegação -->
+    <section class="services">
+        <div class="service-item">
+            <a href="#produtos">
+                <img src="https://via.placeholder.com/100x100/dda0dd/ffffff?text=P" alt="Produtos Nutricionais">
+                <p>Produtos Nutricionais</p>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="#exames">
+                <img src="https://via.placeholder.com/100x100/dda0dd/ffffff?text=E" alt="Exames Médicos">
+                <p>Exames Médicos</p>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="#receitas">
+                <img src="https://via.placeholder.com/100x100/dda0dd/ffffff?text=R" alt="Receitas Saudáveis">
+                <p>Receitas Saudáveis</p>
+            </a>
+        </div>
+        <div class="service-item">
+            <a href="#calculadora">
+                <img src="https://via.placeholder.com/100x100/dda0dd/ffffff?text=IMC" alt="Calculadora IMC">
+                <p>Calculadora IMC</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Grid com Imagem e Texto -->
+    <section id="sobre" class="about-grid">
+        <div class="about-img">
+            <img src="https://via.placeholder.com/300x400/dda0dd/ffffff?text=Sobre+Nós" alt="Sobre nós">
+        </div>
+        <div class="about-text">
+            <h2>Sobre Nós</h2>
+            <p>Texto sobre a nutricionista e seu trabalho, especialidades e experiência.</p>
+        </div>
+    </section>
+
+    <!-- Ícones de Credibilidade e Especialidades -->
+    <section class="specialties">
+        <div class="specialty-item">
+            <img src="https://via.placeholder.com/80x80/dda0dd/ffffff?text=Esp1" alt="Especialidade 1">
+            <p>Especialidade 1</p>
+        </div>
+        <div class="specialty-item">
+            <img src="https://via.placeholder.com/80x80/dda0dd/ffffff?text=Esp2" alt="Especialidade 2">
+            <p>Especialidade 2</p>
+        </div>
+        <div class="specialty-item">
+            <img src="https://via.placeholder.com/80x80/dda0dd/ffffff?text=Esp3" alt="Especialidade 3">
+            <p>Especialidade 3</p>
+        </div>
+        <div class="specialty-item">
+            <img src="https://via.placeholder.com/80x80/dda0dd/ffffff?text=Esp4" alt="Especialidade 4">
+            <p>Especialidade 4</p>
+        </div>
+    </section>
+
+    <!-- Vídeo Incorporado -->
+    <section id="video">
+        <h2>Conheça Nosso Trabalho</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/video-id" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
+
+    <!-- Calculadora de IMC -->
+    <section id="imc" class="imc-calculator">
+        <h2>Calculadora IMC</h2>
+        <form onsubmit="calculateIMC(event)">
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" required>
+            <label for="height">Altura (m):</label>
+            <input type="number" id="height" step="0.01" required>
+            <button type="submit">Calcular IMC</button>
+        </form>
+        <p id="result"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-column">
+            <h3>Contato</h3>
+            <p>Endereço, telefone e email da nutricionista.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Redes Sociais</h3>
+            <p>Links para redes sociais.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <form>
+                <input type="email" placeholder="Seu email">
+                <button type="submit">Inscrever-se</button>
+            </form>
+        </div>
+    </footer>
+
+    <script>
+        
+// Função para calcular o IMC
+function calculateIMC(event) {
+    event.preventDefault();
+
+    const weight = parseFloat(document.getElementById("weight").value);
+    const height = parseFloat(document.getElementById("height").value);
+
+    if (weight > 0 && height > 0) {
+        const imc = weight / (height * height);
+        let resultText;
+
+        if (imc < 18.5) {
+            resultText = "Você está abaixo do peso.";
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            resultText = "Você está com o peso ideal.";
+        } else {
+            resultText = "Você está acima do peso.";
+        }
+
+        document.getElementById("result").textContent = `Seu IMC é ${imc.toFixed(2)}. ${resultText}`;
+    } else {
+        document.getElementById("result").textContent = "Por favor, insira valores válidos.";
+    }
+}
+    </script>
+</body>
+</html>

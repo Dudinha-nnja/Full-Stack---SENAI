@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos às compras?</title>
+    <style>
+        /* Define o estilo da página */
+body {
+    font-family: Arial, sans-serif; /* Fonte */
+    background-color: #f7f7f7;  /* Cor de fundo */
+    margin: 0; /* Margem */
+    padding: 0; /* Espaçamento entre os itens */
+    display: flex; /* Tipo do Display */
+    justify-content: center; /* Modelo do display */
+    align-items: center; /* Alinhamento dos itens */
+    height: 100vh; /* Altura */
+}
+
+/* Estiliza o contêiner central */
+.container {
+    text-align: center; /* Alinhamento do texto */
+    background-color: white; /* Cor de fundo */
+    padding: 20px; /* Espaçamento entre os itens */
+    border-radius: 10px; /* Arredondamento das bordas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Efeito de sombra */
+}
+
+/* Estilo dos campos de input e botões */
+input[type="text"], input[type="number"] {
+    padding: 10px; /* Espaçamento interno */
+    margin: 5px; /* Margem */
+    width: 200px; /* Largura */
+    border: 1px solid #ccc; /* Cor da borda sólida */
+    border-radius: 15px 15px; /* Arrendodamento das bordas */
+}
+/* Estilo do botão */
+button {
+    padding: 10px 20px; /* Espaçamento interno */
+    margin: 10px; /* Margem */
+    background-color: #28a745; /* Cor do fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 15px 15px; /* Arrendodamento das bordas */
+    cursor: pointer;
+}
+/* Efeito mundança de cor ao passar o mouse */
+button:hover {
+    background-color: #218838; /* Cor ao passar o mouse */
+}
+/* Estilos da tabela */
+table {
+    width: 100%; /* Largura */
+    margin-top: 20px; /* Alinhamento da margem acima */
+    border-collapse: collapse; /* Borda dispersa */
+    text-align: left; /*  Alinhamento do texto */
+}
+/*  Estilo das linhas e células da tabela */
+th, td {
+    padding: 10px; /* Espaçamento */
+    border: 1px solid #ccc; /* Cor da borda */
+}
+
+/* Oculta elementos inicialmente */
+.oculto {
+    display: none; /* Retira o elemento do display */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vamos às compras?</h1>
+
+        <!-- Formulário para inserir o nome e o valor do produto -->
+        <div class="formulario">
+            <input type="text" id="produto" placeholder="Nome do produto" />
+            <input type="number" id="valor" placeholder="Valor do produto (R$)" />
+            <button id="adicionar">Inserir Produto</button>
+        </div>
+
+        <!-- Botão para visualizar a tabela -->
+        <button id="visualizarTabela">Visualizar Tabela</button>
+
+        <!-- Tabela que será gerada dinamicamente -->
+        <table id="tabelaProdutos" class="oculto">
+            <thead>
+                <tr>
+                    <th>Produto</th>
+                    <th>Valor (R$)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- As linhas de produtos serão inseridas aqui -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td id="total">R$ 0,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <script>// Array para armazenar os produtos inseridos
+        let produtos = [];  
+        // Cria um array vazio que irá conter os produtos (nome e valor).
+        let total = 0;  
+        // Variável para armazenar o valor total dos produtos.
+        
+        // Elementos de manipulação do DOM
+        const produtoInput = document.getElementById("produto");  
+        // Captura o campo de entrada de nome do produto.
+        const valorInput = document.getElementById("valor");  
+        // Captura o campo de entrada de valor do produto.
+        const tabela = document.getElementById("tabelaProdutos");  
+        // Captura o elemento da tabela onde os produtos serão exibidos.
+        const tbody = tabela.querySelector("tbody");  
+        // Captura o corpo da tabela onde as linhas de produtos serão inseridas.
+        const totalElement = document.getElementById("total");  
+        // Captura o elemento onde será exibido o valor total.
+        
+        // Função para adicionar um produto ao array e atualizar a tabela
+        document.getElementById("adicionar").addEventListener("click", function() {
+            const nomeProduto = produtoInput.value;  
+            // Obtém o valor do campo de nome do produto.
+            const valorProduto = parseFloat(valorInput.value);  
+            // Converte o valor do campo para um número de ponto flutuante.
+        
+            // Verifica se o nome do produto foi preenchido, se o valor é numérico e positivo.
+            if (nomeProduto && !isNaN(valorProduto) && valorProduto > 0) {
+                // Adiciona o produto (nome e valor) ao array de produtos.
+                produtos.push({ nome: nomeProduto, valor: valorProduto });
+        
+                // Atualiza o valor total com o valor do produto recém-adicionado.
+                total += valorProduto;
+        
+                // Limpa os campos de entrada de nome e valor para permitir a inserção de novos produtos.
+                produtoInput.value = '';
+                valorInput.value = '';
+            } else {
+                // Exibe um alerta se os dados inseridos forem inválidos.
+                alert("Por favor, insira um nome de produto válido e um valor numérico positivo.");
+            }
+        });
+        
+        // Função para exibir a tabela com os produtos
+        document.getElementById("visualizarTabela").addEventListener("click", function() {
+            // Limpa o conteúdo atual da tabela para evitar duplicações.
+            tbody.innerHTML = '';
+        
+            // Itera sobre o array de produtos e adiciona uma linha para cada produto na tabela.
+            produtos.forEach(function(produto) {
+                let linha = document.createElement("tr");  // Cria uma nova linha na tabela.
+                let nomeCell = document.createElement("td");  // Cria uma célula para o nome do produto.
+                let valorCell = document.createElement("td");  // Cria uma célula para o valor do produto.
+        
+                // Preenche as células com os dados do produto.
+                nomeCell.textContent = produto.nome;
+                valorCell.textContent = "R$ " + produto.valor.toFixed(2);  // Formata o valor do produto com duas casas decimais.
+        
+                // Adiciona as células à linha.
+                linha.appendChild(nomeCell);
+                linha.appendChild(valorCell);
+                // Adiciona a linha ao corpo da tabela.
+                tbody.appendChild(linha);
+            });
+        
+            // Atualiza o valor total no rodapé da tabela, também formatado com duas casas decimais.
+            totalElement.textContent = "R$ " + total.toFixed(2);
+        
+            // Remove a classe "oculto" da tabela para que ela seja exibida.
+            tabela.classList.remove("oculto");
+        });   </script>
+</body>
+</html>
+

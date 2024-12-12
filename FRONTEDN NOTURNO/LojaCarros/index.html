@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAR Best Savior</title>
+    <!-- Link para uma biblioteca de ícones (Font Awesome) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- CSS Externo -->
+<style>
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Estilo do Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 50px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+/* Logo no Header */
+header img {
+    width: 80px;
+}
+
+.header-menu {
+    display: flex;
+    gap: 20px;
+}
+
+.header-menu select {
+    padding: 10px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Corrigindo a redundância das selects */
+.header-menu select option:first-child {
+    color: #888;
+    font-weight: bold;
+}
+
+/* Estilo do Carousel no Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    animation: slide 10s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(-100%);
+    }
+
+    66% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Catálogo de Carros */
+.catalog {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 50px;
+}
+
+.catalog-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.catalog-card:hover {
+    transform: scale(1.05);
+}
+
+.catalog-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.catalog-card h3 {
+    font-size: 20px;
+    margin: 15px 0;
+}
+
+.catalog-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.catalog-card button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.catalog-card button:hover {
+    background-color: #0056b3;
+}
+
+.catalog-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilização do formulário */
+.form-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 50px;
+}
+
+.contact-form {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.contact-form label i {
+    margin-right: 10px;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    background-position: 0% 0%;
+    background-image: linear-gradient(270deg, transparent, transparent 50%, #218838 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.4s ease;
+}
+
+.contact-form button:hover {
+    background-position: 100% 0%;
+}
+
+/* Imagem ao lado do formulário */
+.form-image {
+    flex: 1;
+}
+
+.form-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Grid para feedbacks de clientes */
+.feedback-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 50px;
+}
+
+.feedback-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.feedback-card p {
+    color: #555;
+}
+
+/* Estrelas para feedbacks */
+.stars {
+    color: #ffc107;
+}
+
+/* Estilo Responsivo */
+@media (max-width: 768px) {
+
+    .catalog,
+    .feedback-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .catalog,
+    .feedback-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        flex-direction: column;
+    }
+
+    .form-image {
+        margin-top: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="https://tse2.mm.bing.net/th/id/OIP.VPiJlD5DArEiEFm_Y3zn1QHaGV?rs=1&pid=ImgDetMain" alt="Logo">
+        <h1>Vendedora de Carros</h1>
+        <div class="header-menu">
+            <select>
+                <option value="" disabled selected>Selecione o Catálogo</option>
+                <option>Carros Usados</option>
+                <option>Carros Novos</option>
+                <option>Promoções</option>
+            </select>
+            <select>
+                <option value="" disabled selected>Selecione a Marca</option>
+                <option>Ford</option>
+                <option>Chevrolet</option>
+                <option>Honda</option>
+            </select>
+            <select>
+                <option value="" disabled selected>Selecione Contato</option>
+                <option>Fale Conosco</option>
+                <option>Localização</option>
+            </select>
+        </div>
+    </header>
+
+    <!-- Carousel em CSS no Banner -->
+    <div class="banner">
+        <div class="slides">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.F4caDjp2NhpDq30xqOuYnwHaC0?rs=1&pid=ImgDetMain" alt="Carro 1">
+            <img src="https://www.designi.com.br/images/preview/10044669.jpg" alt="Carro 2">
+            <img src="https://www.designi.com.br/images/preview/12088624-m.jpg" alt="Carro 3">
+        </div>
+    </div>
+
+    <!-- Catálogo de Carros -->
+    <section class="catalog">
+        <div class="catalog-card">
+            <img src="https://via.placeholder.com/300x200" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do carro 1. Excelente para a cidade.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="catalog-card">
+            <img src="https://via.placeholder.com/300x200" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do carro 1. Excelente para a cidade.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="catalog-card">
+            <img src="https://via.placeholder.com/300x200" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do carro 1. Excelente para a cidade.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="catalog-card">
+            <img src="https://via.placeholder.com/300x200" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do carro 1. Excelente para a cidade.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="catalog-card">
+            <img src="https://via.placeholder.com/300x200" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do carro 1. Excelente para a cidade.</p>
+            <button>Saiba Mais</button>
+        </div>
+        <div class="catalog-card">
+            <img src="https://via.placeholder.com/300x200" alt="Carro 1">
+            <h3>Carro 1</h3>
+            <p>Descrição do carro 1. Excelente para a cidade.</p>
+            <button>Saiba Mais</button>
+        </div>
+    </section>
+
+    <!-- Formulário de Contato com Imagem ao Lado -->
+    <section class="form-container"> <!-- NOVA SEÇÃO COM CLASS FORM-CONT.. -->
+        <div class="contact-form"> <!-- ALTERAR SECTION POR DIV -->
+            <h2>Entre em Contato</h2>
+                <form action="#">
+                    <label for="nome"><i class="fas fa-bug"></i>Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome:">
+
+                    <label for="email"><i class="fas fa-rocket"></i>Email:</label>
+                    <input type="email" id="email" placeholder="Digite seu email:">
+
+                    <label for="message"><i class="fas fa-book"></i>Qual carro deseja?</label>
+                    <textarea id="nome" placeholder="Digite sua mensagem:"></textarea>
+
+                    <button type="submit"><i class="fas fa-download"></i> </button>
+                </form>
+            </div>
+            <div class="form-image">
+                <img src="https://visitarbrasil.com.br/wp-content/uploads/2021/09/Top-10-Automoveis-Cidade-do-Automovel-Comercio-Brasilia-DF-1024x768.jpg" alt="Vendedora Savior Car">    
+           </div>
+    </section>
+
+    <!-- Feedback dos Clientes -->
+    <section class="feedback-grid">
+        <div class="feedback-card">
+            <h3>Cliente Laryssa</h3>
+            <p>Achei o carro perfeito! Recomendo a todos.</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <!-- Comentário 2 -->
+        <div class="feedback-card">
+            <h3>Cliente Fernando</h3>
+            <p>Achei o carro confortável!</p>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: #fff; padding: 40px 50px;">
+        <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 30px;">
+            <!-- Coluna 1: Menus de Navegação -->
+            <div style="flex: 1;">
+                <h3>Menu</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Carros Usados</a></li> <!-- Copie e cola esta mesma linha 4 vezes como abaixo-->
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Carros Novos</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Promoções</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Fale Conosco</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Localização</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 2: Políticas e Termos -->
+            <div style="flex: 1;">
+                <h3>Políticas</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Política de Privacidade</a></li>
+                    <li><a href="#" style="color: #fff; text-decoration: none;">Termos de Serviço</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Formulário de Newsletter -->
+            <div style="flex: 1;">
+                <h3>Receba nossas Novidades</h3>
+                <form action="#" method="post" style="display: flex; flex-direction: column; gap: 10px;">
+                    <input type="email" name="email" placeholder="Seu email"
+                        style="padding: 10px; border-radius: 5px; border: none;">
+                    <button type="submit"
+                        style="padding: 10px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">Inscrever-se</button>
+                </form>
+            </div>
+        </div>
+
+        <div style="margin-top: 30px; text-align: center;">
+            <p>&copy; 2024 Vendedora de Carros. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
