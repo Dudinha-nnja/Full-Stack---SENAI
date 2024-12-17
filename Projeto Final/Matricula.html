@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/matricula.css">
+</head>
+<body>
+    <header>
+        <img src="img/caneta.png" alt="">
+        <h1>Instituição Enzo</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Matricula.html">Catalogo</a>
+            <a href="">Login</a>
+            <a href="">Cadastro</a>
+        </nav>
+    </header>
+  
+    <div id="header-container"></div>
+    <br><br><br><br><br><br><br><br><br>
+    <div class="container">
+        <div class="form" id="form1">
+            <form id="firstForm">
+                <div class="form-header">
+                    <h1>MATRICULA 2025</h1>
+                    <p>nscreva seu filho(a) para o ano letivo de 2025</p>
+                </div>
+                <h3>Informações Aluno</h3>
+                <div class="input-box">
+                    <label for="nome">Nome do aluno:</label>
+                    <input id="nome" type="text" name="nome" placeholder="Digite o nome completo" required>
+                </div>
+                <div class="input-box">
+                    <label for="social">Nome Social::</label>
+                    <input id="social" type="text" name="social" placeholder="Digite o nome social" required>
+                </div>
+                <div class="input-box">
+                    <label for="nascimentor">Data de nascimento:</label>
+                    <input id="nascimento" type="text" name="nascimento" placeholder="Digite a data de nascimento do aluno" required>
+                </div>
+                <div class="input-box">
+                    <label for="cpf">CPF:</label>
+                    <input id="cpf" type="text" name="cpf" placeholder="Digite o CPF do aluno" required>
+                </div>
+                <div class="input-box">
+                    <label for="cpf">RG:</label>
+                    <input id="rg" type="text" name="rg" placeholder="Digite o RG do aluno" required>
+                </div>
+                
+                <div class="input-box">
+                    <label for="curso">Curso de interesse:</label>
+                    <select id="curso" name="curso">
+                        <option value="opcao0"></option>
+                        <option value="opcaoA">Educação Infantil</option>
+                        <option value="opcaoB">Ensino Fundamental</option>
+                        <option value="opcaoC">Ensino Medio</option>
+             
+                    </select>
+                </div>
+                <button type="submit">Próximo</button>
+            </form>
+        </div>
+
+        <div class="form" id="form2" style="display: none;">
+            <form id="secondForm">
+                <div class="form-header">
+                    <h1>Data da Visita</h1>
+                </div>
+                <div class="input-box">
+                    <label for="visitDate">Selecione a data:</label>
+                    <input id="visitDate" type="date" name="visitDate" required>
+                </div>
+                <div class="input-box">
+                    <label for="horario">Horário:</label>
+                    <select id="horario" name="horario">
+                        <option value=""></option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+                </div>
+                <button type="submit">Finalizar</button>
+            </form>
+        </div>
+
+        <!-- Resumo -->
+        <div class="summary" id="summary" style="display: none;">
+            <h1>Resumo</h1>
+            <p id="nameSummary"></p>
+            <p id="emailSummary"></p>
+            <p id="phoneSummary"></p>
+            <p id="catSummary"></p>
+            <p id="dateSummary"></p>
+            <p id="horarioSummary"></p>
+        </div>
+    </div>
+</body>
+<script>   // Manipula o envio do primeiro formulário
+    document.getElementById('firstForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        document.getElementById('form1').style.display = 'none'; // Esconde o primeiro formulário
+        document.getElementById('form2').style.display = 'flex'; // Mostra o segundo formulário
+    });
+
+    // Manipula o envio do segundo formulário
+    document.getElementById('secondForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        alert('Obrigado! Sua solicitação foi registrada.'); // Mensagem de confirmação
+        // Aqui você pode adicionar lógica para processar ou salvar os dados
+        
+    });
+                // Exibe o resumo
+              // Manipula o envio do primeiro formulário
+    document.getElementById('firstForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+        document.getElementById('form1').style.display = 'none'; // Esconde o primeiro formulário
+        document.getElementById('form2').style.display = 'flex'; // Mostra o segundo formulário
+    });
+
+    // Manipula o envio do segundo formulário
+    document.getElementById('secondForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Impede o envio padrão do formulário
+
+        // Coleta os dados
+        const name = document.getElementById('firstname').value;
+        const email = document.getElementById('lastname').value;
+        const phone = document.getElementById('number').value;
+        const cat = document.getElementById('cat').options[document.getElementById('cat').selectedIndex].text;
+        const date = document.getElementById('visitDate').value;
+        const horario = document.getElementById('horario').options[document.getElementById('horario').selectedIndex].text;
+
+
+        // Exibe o resumo
+        document.getElementById('nameSummary').textContent = `Nome: ${name}`;
+        document.getElementById('emailSummary').textContent = `E-mail: ${email}`;
+        document.getElementById('phoneSummary').textContent = `Telefone: ${phone}`;
+        document.getElementById('catSummary').textContent = `Gato escolhido: ${cat}`;
+        document.getElementById('dateSummary').textContent = `Data da visita: ${date}`;
+        document.getElementById('horarioSummary').textContent = `Horário da visita: ${horario}`;
+        
+
+
+        document.getElementById('form2').style.display = 'none'; // Esconde o segundo formulário
+        document.getElementById('summary').style.display = 'flex'; // Mostra o resumo
+
+        
+    });</script>
+</html>
