@@ -46,3 +46,210 @@ nav a:hover{
     transition: 0.3s;
     font-size: 15px;
 }
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container #form1{
+    background-color: #02007c;
+    display: flex;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 700px;
+    height: 850px;
+}
+.container #form1 h3{
+    color: #f9f9f9;
+    font-size: 20px;
+    
+}
+.container #form1 .form-header{
+    color: #e0e0e0;
+}
+.container #form1 .form-header h1{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container #form1 .form-header p{
+display: flex; justify-content: center ;}
+
+.container #form1 .input-box label{
+font-size: 15px;
+color: #ffffff;
+display: flex;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.container #form1 .input-box input{
+height: 35px;
+width: 500px;
+border-radius:9px;
+
+}
+.container #form1 .input-box ::placeholder{
+    font-size: 16px;
+    color: #000000;
+}
+.container #form1 #firstForm{
+    margin-left: 100px;
+}
+
+.container #form1 .input-box select{
+    height: 30px;
+    width: 250px;
+}
+.container #form1 button{
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FF6347;
+    color: #f9f9f9;
+}
+.container #form1 button:hover{
+background-color: #ff2600;
+color: #f9f9f9;
+width: 105px;
+height: 55px;
+transition: 0.3s;
+}
+
+
+
+
+.container #form2{
+    background-color: #02007c;
+    display: flex;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 700px;
+    height: 950px;
+}
+.container #form2 h3{
+    color: #f9f9f9;
+    font-size: 20px;
+    
+}
+.container #form2 .form-header{
+    color: #e0e0e0;
+}
+#form2 #secondForm .form-header h1{
+    display: flex;
+    justify-content: center;
+}
+
+#form2 .input-box label{
+font-size: 15px;
+color: #ffffff;
+display: flex;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.container #form2 .input-box input{
+height: 35px;
+width: 500px;
+border-radius:9px;
+
+}
+.container #form2 .input-box ::placeholder{
+    font-size: 16px;
+    color: #000000;
+}
+.container #form2 #secondForm{
+    margin-left: 100px;
+}
+
+.container #form2 .input-box select{
+    height: 30px;
+    width: 250px;
+}
+.container #form2 button{
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FF6347;
+    color: #f9f9f9;
+}
+.container #form2 button:hover{
+background-color: #ff2600;
+color: #f9f9f9;
+width: 105px;
+height: 55px;
+transition: 0.3s;
+}
+#outroResponsavel {
+    display: none; 
+    background-color: #02007c; 
+    border-radius: 10px; 
+    padding: 15px; 
+    margin-top: 20px; 
+}
+
+
+#outroResponsavel label {
+    font-size: 14px;
+    color: #ffffff; 
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#outroResponsavel input {
+    width: calc(100% - 20px); 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+
+#outroResponsavel input::placeholder {
+    font-size: 14px;
+    color: #555;
+}
+
+.container #form3{
+    background-color: #02007c;
+    display: flex;
+    margin-top: 40px;
+    border-radius: 50px;
+    width: 700px;
+    height: 650px;
+}
+.container #form3 h3{
+    color: #f9f9f9;
+    font-size: 20px;
+    
+}
+.container #form3 .form-header{
+    color: #e0e0e0;
+}
+.container #form3 .form-header h1{
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container #form3 p{
+display: flex; 
+justify-content: center ;
+color: #ccc;}
+
+.container #form3 ul, li{
+    color: #fff;
+}
+
+
+
+
+#dropzone {
+    cursor: pointer;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+#dropzone.dragover {
+    background-color: #e0e0e0;
+}

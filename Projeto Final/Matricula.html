@@ -3,147 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Matrícula 2025</title>
     <link rel="stylesheet" href="style/matricula.css">
 </head>
 <body>
     <header>
-        <img src="img/caneta.png" alt="">
+        <img src="img/caneta.png" alt="Logo">
         <h1>Instituição Enzo</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="Matricula.html">Catalogo</a>
+            <a href="Matricula.html">Matricula</a>
             <a href="">Login</a>
             <a href="">Cadastro</a>
         </nav>
     </header>
-  
-    <div id="header-container"></div>
-    <br><br><br><br><br><br><br><br><br>
+    
     <div class="container">
+        <!-- Formulário 1 -->
         <div class="form" id="form1">
             <form id="firstForm">
+                <br><br>
                 <div class="form-header">
-                    <h1>MATRICULA 2025</h1>
-                    <p>nscreva seu filho(a) para o ano letivo de 2025</p>
+                    <h1>MATRÍCULA 2025</h1>
+                    <p>Inscreva seu filho(a) para o ano letivo de 2025</p><br>
                 </div>
-                <h3>Informações Aluno</h3>
+                <h3>Informações do Aluno</h3>
+                <br>
                 <div class="input-box">
                     <label for="nome">Nome do aluno:</label>
-                    <input id="nome" type="text" name="nome" placeholder="Digite o nome completo" required>
-                </div>
+                    <input id="nome" type="text" name="nome" placeholder="  Digite o nome completo" required>
+                </div><br>
                 <div class="input-box">
-                    <label for="social">Nome Social::</label>
-                    <input id="social" type="text" name="social" placeholder="Digite o nome social" required>
-                </div>
+                    <label for="social">Nome Social:</label>
+                    <input id="social" type="text" name="social" placeholder="  Digite o nome social">
+                </div><br>
                 <div class="input-box">
-                    <label for="nascimentor">Data de nascimento:</label>
-                    <input id="nascimento" type="text" name="nascimento" placeholder="Digite a data de nascimento do aluno" required>
-                </div>
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input id="nascimento" type="date" name="nascimento" required>
+                </div><br>
                 <div class="input-box">
                     <label for="cpf">CPF:</label>
-                    <input id="cpf" type="text" name="cpf" placeholder="Digite o CPF do aluno" required>
-                </div>
+                    <input id="cpf" type="text" name="cpf" placeholder="  Digite o CPF" required>
+                </div><br>
                 <div class="input-box">
-                    <label for="cpf">RG:</label>
-                    <input id="rg" type="text" name="rg" placeholder="Digite o RG do aluno" required>
-                </div>
-                
+                    <label for="rg">RG:</label>
+                    <input id="rg" type="text" name="rg" placeholder="  Digite o RG" required>
+                </div><br>
                 <div class="input-box">
                     <label for="curso">Curso de interesse:</label>
-                    <select id="curso" name="curso">
-                        <option value="opcao0"></option>
-                        <option value="opcaoA">Educação Infantil</option>
-                        <option value="opcaoB">Ensino Fundamental</option>
-                        <option value="opcaoC">Ensino Medio</option>
-             
+                    <select id="curso" name="curso" required>
+                        <option value="">Selecione</option>
+                        <option value="educacao_infantil">Educação Infantil</option>
+                        <option value="ensino_fundamental">Ensino Fundamental</option>
+                        <option value="ensino_medio">Ensino Médio</option>
                     </select>
-                </div>
+                </div><br>
+                <div class="input-box">
+                    <label for="turno">Turno:</label>
+                    <select id="turno" name="turno" required>
+                        <option value="">Selecione</option>
+                        <option value="manha">Manhã</option>
+                        <option value="tarde">Tarde</option>
+                    </select>
+                </div><br>
+                <div class="input-box">
+                    <label for="necessidade">Possui necessidade especial?</label>
+                    <select id="necessidade" name="necessidade" required>
+                        <option value="">Selecione</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div><br>
                 <button type="submit">Próximo</button>
             </form>
         </div>
 
+        <!-- Formulário 2 -->
         <div class="form" id="form2" style="display: none;">
             <form id="secondForm">
                 <div class="form-header">
-                    <h1>Data da Visita</h1>
-                </div>
+                    <br>
+                    <h1>Responsáveis</h1>
+                </div><br>
+                <h3>Informações da Mãe</h3>
                 <div class="input-box">
-                    <label for="visitDate">Selecione a data:</label>
-                    <input id="visitDate" type="date" name="visitDate" required>
-                </div>
+                    <label for="nomemae">Nome da Mãe:</label>
+                    <input id="nomemae" type="text" name="nomemae" placeholder="Digite o nome completo" required>
+                </div><br>
                 <div class="input-box">
-                    <label for="horario">Horário:</label>
-                    <select id="horario" name="horario">
-                        <option value=""></option>
-                        <option value="manha">Manhã</option>
-                        <option value="tarde">Tarde</option>
+                    <label for="cpfmae">CPF:</label>
+                    <input id="cpfmae" type="text" name="cpfmae" placeholder="Digite o CPF" required>
+                </div><br>
+                <div class="input-box">
+                    <label for="contatomae">Contato:</label>
+                    <input id="contatomae" type="text" name="contatomae" placeholder="Digite o número de contato" required>
+                </div><br>
+                <div class="input-box">
+                    <label for="emailmae">Email:</label>
+                    <input id="emailmae" type="email" name="emailmae" placeholder="Digite o email" required>
+                </div><br>
+
+                <h3>Informações do Pai</h3>
+                <div class="input-box">
+                    <label for="nomepai">Nome do Pai:</label>
+                    <input id="nomepai" type="text" name="nomepai" placeholder="Digite o nome completo" required>
+                </div><br>
+                <div class="input-box">
+                    <label for="cpfpai">CPF:</label>
+                    <input id="cpfpai" type="text" name="cpfpai" placeholder="Digite o CPF" required>
+                </div><br>
+                <div class="input-box">
+                    <label for="contatopai">Contato:</label>
+                    <input id="contatopai" type="text" name="contatopai" placeholder="Digite o número de contato" required>
+                </div><br>
+                <div class="input-box">
+                    <label for="emailpai">Email:</label>
+                    <input id="emailpai" type="email" name="emailpai" placeholder="Digite o email" required>
+                </div><br>
+
+                <!-- Opção de adicionar outro responsável -->
+                <!-- <h3>Outro Responsável</h3>
+                <div class="input-box">
+                    <label for="addResponsavel">Gostaria de adicionar outro responsável?</label>
+                    <select id="addResponsavel" name="addResponsavel">
+                        <option value="nao">Não</option>
+                        <option value="sim">Sim</option>
                     </select>
+                </div><br>
+
+                <!-- Campos do outro responsável (ocultos inicialmente)
+                <div id="outroResponsavel">
+                    <div class="input-box">
+                        <label for="nomeOutro">Nome do Outro Responsável:</label>
+                        <input id="nomeOutro" type="text" name="nomeOutro" placeholder="Digite o nome completo">
+                    </div>
+                    <div class="input-box">
+                        <label for="cpfOutro">CPF:</label>
+                        <input id="cpfOutro" type="text" name="cpfOutro" placeholder="Digite o CPF">
+                    </div>
+                    <div class="input-box">
+                        <label for="contatoOutro">Contato:</label>
+                        <input id="contatoOutro" type="text" name="contatoOutro" placeholder="Digite o número de contato">
+                    </div>
+                    <div class="input-box">
+                        <label for="emailOutro">Email:</label>
+                        <input id="emailOutro" type="email" name="emailOutro" placeholder="Digite o email">
+                    </div>
+                </div> 
+                 -->
+                <button type="submit">Próximo</button>
+            </form>
+        </div>
+
+        <!-- Formulário 3 -->
+        <div class="form" id="form3" style="display: none;">
+            <form id="thirdForm">
+                <div class="form-header">
+                    <h1>Envio de Documentos</h1>
+                </div>
+                <p>Envie os seguintes documentos:</p>
+                <ul>
+                    <li>Certidão de Nascimento</li>
+                    <br>
+                    <li>CPF e RG do responsável</li><br>
+                    <li>Carteira de Vacinação</li><br>
+                    <li>Comprovante de Residência</li><br>
+                </ul>
+                <div id="dropzone" style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin-bottom: 15px;">
+                    <p>Arraste e solte os documentos ou clique para selecionar</p>
+                    <input type="file" id="docs" name="docs" accept=".pdf" multiple style="display: none;">
                 </div>
                 <button type="submit">Finalizar</button>
             </form>
         </div>
 
-        <!-- Resumo -->
-        <div class="summary" id="summary" style="display: none;">
-            <h1>Resumo</h1>
-            <p id="nameSummary"></p>
-            <p id="emailSummary"></p>
-            <p id="phoneSummary"></p>
-            <p id="catSummary"></p>
-            <p id="dateSummary"></p>
-            <p id="horarioSummary"></p>
+        <!-- Mensagem de confirmação -->
+        <div id="confirmation" style="display: none; text-align: center;">
+            <h1>Cadastro Concluído!</h1>
+            <p>Obrigado por realizar a matrícula. Entraremos em contato.</p>
         </div>
     </div>
+
+    <script>
+    document.getElementById('firstForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
+    document.getElementById('form1').style.display = 'none'; // Oculta o primeiro formulário
+    document.getElementById('form2').style.display = 'block'; // Exibe o segundo formulário
+});
+
+document.getElementById('secondForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
+    document.getElementById('form2').style.display = 'none'; // Oculta o segundo formulário
+    document.getElementById('form3').style.display = 'block'; // Exibe o terceiro formulário
+});
+
+document.getElementById('thirdForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Impede o envio do formulário
+    document.getElementById('form3').style.display = 'none'; // Oculta o terceiro formulário
+    document.getElementById('confirmation').style.display = 'block'; // Exibe a mensagem de confirmação
+});
+
+// Exibição do outro responsável
+const addResponsavelSelect = document.getElementById('addResponsavel');
+const outroResponsavelDiv = document.getElementById('outroResponsavel');
+
+addResponsavelSelect.addEventListener('change', function () {
+    if (this.value === 'sim') {
+        outroResponsavelDiv.style.display = 'block'; // Mostra os campos
+    } else {
+        outroResponsavelDiv.style.display = 'none'; // Esconde os campos
+    }
+});
+
+
+    </script>
 </body>
-<script>   // Manipula o envio do primeiro formulário
-    document.getElementById('firstForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-        document.getElementById('form1').style.display = 'none'; // Esconde o primeiro formulário
-        document.getElementById('form2').style.display = 'flex'; // Mostra o segundo formulário
-    });
-
-    // Manipula o envio do segundo formulário
-    document.getElementById('secondForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-        alert('Obrigado! Sua solicitação foi registrada.'); // Mensagem de confirmação
-        // Aqui você pode adicionar lógica para processar ou salvar os dados
-        
-    });
-                // Exibe o resumo
-              // Manipula o envio do primeiro formulário
-    document.getElementById('firstForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-        document.getElementById('form1').style.display = 'none'; // Esconde o primeiro formulário
-        document.getElementById('form2').style.display = 'flex'; // Mostra o segundo formulário
-    });
-
-    // Manipula o envio do segundo formulário
-    document.getElementById('secondForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Impede o envio padrão do formulário
-
-        // Coleta os dados
-        const name = document.getElementById('firstname').value;
-        const email = document.getElementById('lastname').value;
-        const phone = document.getElementById('number').value;
-        const cat = document.getElementById('cat').options[document.getElementById('cat').selectedIndex].text;
-        const date = document.getElementById('visitDate').value;
-        const horario = document.getElementById('horario').options[document.getElementById('horario').selectedIndex].text;
-
-
-        // Exibe o resumo
-        document.getElementById('nameSummary').textContent = `Nome: ${name}`;
-        document.getElementById('emailSummary').textContent = `E-mail: ${email}`;
-        document.getElementById('phoneSummary').textContent = `Telefone: ${phone}`;
-        document.getElementById('catSummary').textContent = `Gato escolhido: ${cat}`;
-        document.getElementById('dateSummary').textContent = `Data da visita: ${date}`;
-        document.getElementById('horarioSummary').textContent = `Horário da visita: ${horario}`;
-        
-
-
-        document.getElementById('form2').style.display = 'none'; // Esconde o segundo formulário
-        document.getElementById('summary').style.display = 'flex'; // Mostra o resumo
-
-        
-    });</script>
 </html>
