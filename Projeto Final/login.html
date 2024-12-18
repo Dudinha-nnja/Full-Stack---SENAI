@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login e Cadastro</title>
+    <style>
+       *{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url(img/login3.png);
+    cursor: url('img/icone.png'), auto;
+
+}
+nav {
+    display: flex; /* Aplica flexbox no nav */
+    color: white;
+    gap: 40px; /* Espaçamento entre os links */
+}
+header{
+    display: flex;
+    background-color: rgb(0, 2, 102);
+    height: 70px;
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    
+}
+header h1{
+    color: whitesmoke;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+header h1:hover{
+    color: #FF6347;
+    transition: 0.4s;
+    font-size: 30px;
+}
+header img{
+    margin-left: 10px;
+    width: 50px;
+}
+nav{
+    margin-left: auto; /* Move os links para a direita */
+    margin-top: 10px;
+    margin-right: 30px;
+}
+nav a{
+    color: aliceblue;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a:hover{
+    color: #FF6347;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+        .container {
+            color: white;
+            margin-top: 200px;
+            margin-left: 700px;
+            background-color:rgb(0, 2, 102);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #ff6f2c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff7b00;
+        }
+
+        .toggle-link {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007BFF;
+            cursor: pointer;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/caneta.png" alt="">
+       <a href="Matricula.html" style="text-decoration: none;"><h1>Instituição Enzo</h1></a> 
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="Matricula.html">Matriculas</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+    <div class="container">
+        <!-- Login Form -->
+        <div id="loginForm">
+            <h2>Login</h2>
+            <form>
+                <label for="loginUser">Usuário</label>
+                <input type="text" id="loginUser" name="loginUser" placeholder="Digite seu usuário" required>
+
+                <label for="loginPassword">Senha</label>
+                <input type="password" id="loginPassword" name="loginPassword" placeholder="Digite sua senha" required>
+<br>
+                <button type="submit">Entrar</button>
+                <br>
+            </form>
+            <p class="toggle-link" onclick="toggleForms()" style="text-decoration: none; color: white;">Ainda não tem uma conta? Cadastre-se</p>
+        </div>
+
+        <!-- Registration Form -->
+        <div id="registerForm" class="hidden">
+            <h2>Cadastro</h2>
+            <form>
+                <label for="registerUser">Usuário</label>
+                <input type="text" id="registerUser" name="registerUser" placeholder="Escolha um usuário" required>
+
+                <label for="registerEmail">Email</label>
+                <input type="email" id="registerEmail" name="registerEmail" placeholder="Digite seu email" required>
+
+                <label for="registerPassword">Senha</label>
+                <input type="password" id="registerPassword" name="registerPassword" placeholder="Crie uma senha" required>
+
+                <label for="registerConfirmPassword">Confirme a Senha</label>
+                <input type="password" id="registerConfirmPassword" name="registerConfirmPassword" placeholder="Confirme sua senha" required>
+<br>
+                <button type="submit">Cadastrar</button>
+            </form><br>
+            <p class="toggle-link" onclick="toggleForms()"style="text-decoration: none; color: white;">Já tem uma conta? Faça login</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+
+            if (loginForm.classList.contains('hidden')) {
+                loginForm.classList.remove('hidden');
+                registerForm.classList.add('hidden');
+            } else {
+                loginForm.classList.add('hidden');
+                registerForm.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

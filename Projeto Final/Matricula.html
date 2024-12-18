@@ -13,8 +13,7 @@
         <nav>
             <a href="index.html">Home</a>
             <a href="Matricula.html">Matricula</a>
-            <a href="">Login</a>
-            <a href="">Cadastro</a>
+            <a href="login.html">Login</a>
         </nav>
     </header>
     
@@ -159,16 +158,21 @@
         <div class="form" id="form3" style="display: none;">
             <form id="thirdForm">
                 <div class="form-header">
+                    <br>
                     <h1>Envio de Documentos</h1>
                 </div>
-                <p>Envie os seguintes documentos:</p>
-                <ul>
+                <p>Envie os seguintes documentos:</p><br>
+                <ul><br>
                     <li>Certidão de Nascimento</li>
                     <br>
                     <li>CPF e RG do responsável</li><br>
                     <li>Carteira de Vacinação</li><br>
                     <li>Comprovante de Residência</li><br>
+                    <li>CPF e RG do aluno</li><br>
+                    <li>Historico escolar (para o ensino fundamental e medio)</li>
                 </ul>
+                <br><br><br><br><br>
+
                 <div id="dropzone" style="border: 2px dashed #ccc; padding: 20px; text-align: center; margin-bottom: 15px;">
                     <p>Arraste e solte os documentos ou clique para selecionar</p>
                     <input type="file" id="docs" name="docs" accept=".pdf" multiple style="display: none;">
@@ -179,8 +183,15 @@
 
         <!-- Mensagem de confirmação -->
         <div id="confirmation" style="display: none; text-align: center;">
-            <h1>Cadastro Concluído!</h1>
-            <p>Obrigado por realizar a matrícula. Entraremos em contato.</p>
+            <h1>Cadastro Concluído!</h1><br>
+            <p>Obrigado por realizar a matrícula. Prezado(a) [Nome do Responsável],
+
+                Enviaremos no dia 10 de janeiro de 2025 um e-mail com a confirmação da matrícula e as instruções de pagamento. Pedimos que fique atento(a) à sua caixa de entrada para não perder o prazo.
+                <br><br>
+                Obrigado pela confiança!
+                
+                Atenciosamente,
+                Instituição Enzo</p>
         </div>
     </div>
 

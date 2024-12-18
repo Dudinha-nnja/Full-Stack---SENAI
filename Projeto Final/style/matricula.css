@@ -3,7 +3,9 @@
     padding: 0%;
 }
 body{
-    background-color: rgb(255, 255, 255);
+    background-image: url(../img/novo.png);
+    cursor: url('../img/icone.png'), auto;
+
 }
 nav {
     display: flex; /* Aplica flexbox no nav */
@@ -124,7 +126,7 @@ transition: 0.3s;
     margin-top: 40px;
     border-radius: 50px;
     width: 700px;
-    height: 950px;
+    height: 850px;
 }
 .container #form2 h3{
     color: #f9f9f9;
@@ -217,7 +219,7 @@ transition: 0.3s;
     margin-top: 40px;
     border-radius: 50px;
     width: 700px;
-    height: 650px;
+    height: 550px;
 }
 .container #form3 h3{
     color: #f9f9f9;
@@ -239,10 +241,24 @@ color: #ccc;}
 
 .container #form3 ul, li{
     color: #fff;
+    margin-left: 30px;
 }
-
-
-
+.container #form3 button{
+    width: 100px;
+    height: 27px;
+    border-radius: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FF6347;
+    color: #f9f9f9;
+    margin-left: 300px;
+}
+.container #form3 button:hover{
+background-color: #ff2600;
+color: #f9f9f9;
+width: 105px;
+height: 30px;
+transition: 0.3s;
+}
 
 #dropzone {
     cursor: pointer;
@@ -252,4 +268,14 @@ color: #ccc;}
 
 #dropzone.dragover {
     background-color: #e0e0e0;
+}
+
+#confirmation{
+    background-color: #02007c;
+    color: #ffffff;
+    width: 600px;
+    height: 200px;
+    border-radius: 40px;
+    margin-top: 50px;
+    padding: 15px;
 }
