@@ -121,6 +121,35 @@ nav a:hover{
         .hidden {
             display: none;
         }
+        footer{
+            background-color: #FF6347;
+            color: white;
+            height: 180px;
+           
+        }
+        footer a{
+        text-decoration: none;
+        color: #f0f0f0;
+        font-size: 23px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        
+        }
+        footer .coisas{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 50px;
+            margin-right: 100px;
+        
+        }
+        footer p{
+            text-align: center;
+        }
+        footer .coisas .direitos{
+            margin-left: 1
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -171,7 +200,33 @@ nav a:hover{
             <p class="toggle-link" onclick="toggleForms()"style="text-decoration: none; color: white;">Já tem uma conta? Faça login</p>
         </div>
     </div>
-
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <br>
+        <div class="coisas">
+        <div class="direitoa">
+            <h1>Contatos</h1>
+            <a href="">Telefone: (61)99185-0022</a><br>
+            <a href="">Celular: (61)99185-0022</a><br>
+            <a href="">Email: Instituiçãoenzo@gmail.com</a>
+        </div>
+        <div class="sociais">
+            <h1>Nossas instituições no DF</h1>
+            <a href="">Guará 1</a><br>
+            <a href="">Ceilandia Centro</a><br>
+            <a href="">Taguatinga Norte</a>
+        </div>
+        <div class="pessoas">
+            <h1>Redes Sociais</h1>
+            <a href=""><img src="img/facebook (1).png" alt=""> Facebook</a><br>
+            <a href=""><img src="img/instagram.png" alt=""> Instagram</a><br>
+            <a href=""><img src="img/telegrama.png" alt=""> Telegram</a>
+        </div>
+       
+    </div>
+    <br>
+        <p>© 2024 Instituição Enzo DF</p>
+    </footer>
     <script>
         function toggleForms() {
             const loginForm = document.getElementById('loginForm');
