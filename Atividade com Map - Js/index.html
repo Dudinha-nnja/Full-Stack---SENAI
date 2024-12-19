@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas de Cozinha</title>
+    <style>
+        /* Resetando margens e paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f9f9f9, #e4e4e4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container principal */
+        .container {
+            text-align: center;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 650px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 24px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo para os botões */
+        .buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .recipe-btn {
+            background: #6c63ff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .recipe-btn:hover {
+            background: #574bdb;
+            transform: scale(1.05);
+        }
+
+        /* Estilo para a seção de receitas */
+        .receitas {
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .receitas h2 {
+            font-size: 22px;
+            color: #444444;
+            margin-bottom: 10px;
+        }
+
+        .receitas p {
+            font-size: 16px;
+            color: #666666;
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        /* Animação de fadeIn */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha uma categoria de receita</h1>
+        
+        <div class="buttons">
+            <button class="recipe-btn" onclick="mostrarReceitas('salgado')">Salgado</button>
+            <button class="recipe-btn" onclick="mostrarReceitas('doce')">Doce</button>
+            <button class="recipe-btn" onclick="mostrarReceitas('sucos')">Sucos</button>
+        </div>
+
+        <div id="receitas" class="receitas">
+            <!-- As receitas serão exibidas aqui -->
+        </div>
+    </div>
+
+    <script>
+        function mostrarReceitas(categoria) {
+            const receitasContainer = document.getElementById("receitas");
+
+            let receitasHTML = ""; // String para armazenar o conteúdo HTML das receitas
+
+            if (categoria === "salgado") {
+                receitasHTML = `
+                    <h2>Receitas Salgado:</h2>
+                    <p><strong>1. Pastel de Carne:</strong><br>Ingredientes: Massa de pastel, carne moída, cebola, alho, temperos.<br>Método: Recheie a massa e frite até dourar.</p>
+                    <p><strong>2. Empada de Frango:</strong><br>Ingredientes: Massa de empada, frango desfiado, molho de tomate.<br>Método: Modele as empadas e asse até dourar.</p>
+                `;
+            } else if (categoria === "doce") {
+                receitasHTML = `
+                    <h2>Receitas Doce:</h2>
+                    <p><strong>1. Brigadeiro:</strong><br>Ingredientes: Leite condensado, chocolate em pó, manteiga.<br>Método: Cozinhe os ingredientes até atingir o ponto de brigadeiro e enrole.</p>
+                    <p><strong>2. Pudim de Leite Condensado:</strong><br>Ingredientes: Leite condensado, ovos, leite, açúcar.<br>Método: Bata os ingredientes, caramelize a forma e asse em banho-maria.</p>
+                `;
+            } else if (categoria === "sucos") {
+                receitasHTML = `
+                    <h2>Receitas Sucos:</h2>
+                    <p><strong>1. Suco de Laranja:</strong><br>Ingredientes: Laranjas frescas, açúcar (opcional).<br>Método: Esprema as laranjas e adoce a gosto.</p>
+                    <p><strong>2. Suco Verde:</strong><br>Ingredientes: Couve, maçã, limão, gengibre, água.<br>Método: Bata todos os ingredientes no liquidificador e sirva.</p>
+                `;
+            }
+
+            // Atualiza o conteúdo da div de receitas
+            receitasContainer.innerHTML = receitasHTML;
+        }
+    </script>
+</body>
+</html>
