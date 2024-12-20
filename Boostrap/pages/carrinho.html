@@ -90,40 +90,20 @@
         <section id="telaCarrinho" class="container-fluid d-flex flex-column align-items-center">
             <h1 class="my-3">CARRINHO</h1>
             <div id="infoCarrinho" class="container row p-0">
-                <!-- LADO A - PRODUTOS ADICIONADOS AO CARRINHO -->
-                <div id="produtosDoCarrinho" class="col-7">
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="../images/refri.png" class="img-fluid rounded-start" alt="Refrigerante">
-                            </div>
-                            <div class="col-md-8 d-flex align-items-center justify-content-between">
-                                <div class="card-body">
-                                    <h5 class="card-title">REFRIGERANTE</h5>
-                                    <p class="card-text text-success">R$ 12,00</p>
-                                </div>
-                                <button class="btn btn-danger" onclick="removerItem(this)">Remover</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <div id="produtosDoCarrinho" class="col-7"></div>
 
-                <!-- LADO B - VALORES, ENDEREÇO E COMPRA DO CARRINHO -->
                 <div id="comprarCarrinho" class="col-5">
                     <h5 class="text-center">Resumo do Pedido</h5>
-                    <p>Total: <span id="totalCarrinho">R$ 12,00</span></p>
+                    <p>Total: <span id="totalCarrinho">R$ 0,00</span></p>
                     <form>
-                        <!-- NOME -->
                         <div class="mb-3">
                             <label for="nome" class="form-label">Nome:</label>
                             <input type="text" class="form-control" id="nome">
                         </div>
-                        <!-- CEP -->
                         <div class="mb-3">
                             <label for="cep" class="form-label">CEP:</label>
                             <input type="text" class="form-control" id="cep">
                         </div>
-                        <!-- ESTADO -->
                         <div class="mb-3">
                             <label for="estado" class="form-label">Estado:</label>
                             <input type="text" class="form-control" id="estado">
@@ -135,18 +115,7 @@
         </section>
     </main>
 
-    <script>
-        function removerItem(button) {
-            const card = button.closest('.card');
-            card.remove();
-            atualizarTotal();
-        }
-
-        function atualizarTotal() {
-            const totalSpan = document.getElementById('totalCarrinho');
-            totalSpan.textContent = "R$ 0,00"; // Atualize com o cálculo real caso necessário
-        }
-    </script>
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
