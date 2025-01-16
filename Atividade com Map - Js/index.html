@@ -1,146 +1,245 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receitas de Cozinha</title>
+    <title>Receitas</title>
     <style>
-        /* Resetando margens e paddings */
-        * {
+        body {
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background-color: #fff7e6;
+            color: #4a4a4a;
         }
-
-        /* Corpo da página */
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #f9f9f9, #e4e4e4);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        /* Container principal */
-        .container {
+        header {
+            background-color: #ffcc80;
+            color: #4a4a4a;
             text-align: center;
-            background: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            width: 90%;
-            max-width: 650px;
-            animation: fadeIn 1s ease-in-out;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        /* Título principal */
-        h1 {
-            font-size: 24px;
-            color: #333333;
-            margin-bottom: 20px;
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
         }
-
-        /* Estilo para os botões */
-        .buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+        .accordion {
+            max-width: 1200px;
+            margin: 2rem auto;
+            background-color: #ffd8a8;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-
-        .recipe-btn {
-            background: #6c63ff;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 6px;
+        .accordion-item {
+            border-bottom: 1px solid #ffcc80;
+        }
+        .accordion-title {
+            background-color: #ffcc80;
+            padding: 1rem 1.5rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #4a4a4a;
         }
-
-        .recipe-btn:hover {
-            background: #574bdb;
-            transform: scale(1.05);
+        .accordion-title:hover {
+            background-color: #ffb366;
         }
-
-        /* Estilo para a seção de receitas */
-        .receitas {
-            margin-top: 30px;
-            text-align: left;
+        .accordion-content {
+            display: none;
+            padding: 1.5rem;
+            background-color: #fff7e6;
         }
-
-        .receitas h2 {
-            font-size: 22px;
-            color: #444444;
-            margin-bottom: 10px;
+        .accordion-content .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 1rem;
+            overflow: hidden;
         }
-
-        .receitas p {
-            font-size: 16px;
-            color: #666666;
-            line-height: 1.8;
-            margin-bottom: 10px;
+        .accordion-content .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
         }
-
-        /* Animação de fadeIn */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .accordion-content .card-content {
+            padding: 1rem;
+        }
+        .accordion-content .card-content h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #ff704d;
+        }
+        .accordion-content .card-content p {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #ffcc80;
+            color: #4a4a4a;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const items = document.querySelectorAll('.accordion-title');
+
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const content = item.nextElementSibling;
+
+                    if (content.style.display === 'block') {
+                        content.style.display = 'none';
+                    } else {
+                        document.querySelectorAll('.accordion-content').forEach(c => c.style.display = 'none');
+                        content.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>Escolha uma categoria de receita</h1>
-        
-        <div class="buttons">
-            <button class="recipe-btn" onclick="mostrarReceitas('salgado')">Salgado</button>
-            <button class="recipe-btn" onclick="mostrarReceitas('doce')">Doce</button>
-            <button class="recipe-btn" onclick="mostrarReceitas('sucos')">Sucos</button>
+    <header>
+        <h1>Receitas Deliciosas</h1>
+    </header>
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-title">Salgados</div>
+            <div class="accordion-content">
+                <div class="card">
+                    <img src="img/bolobacalhau.jpg" alt="bolinhobacalhau">
+                    <div class="card-content">
+                        <h3>Bolinho de bacalhau</h3>
+                        <p>1 kg de batatas
+                            peixe bacalhau dessalgado
+                            500 g de bacalhau desfiado e dessalgado
+                            azeite
+                            100 ml de azeite de oliva
+                            cebola
+                            1 cebola
+                            farinha de trigo
+                            2 colheres de trigo
+                            salsa
+                            1 colher de salsa
+                            alho
+                            4 dentes de alho
+                            sal
+                            Sal a gosto</p>
+                        <p>Modo de preparo:
+                            1
+                            Coloque o bacalhau de molho em água fria por 12 horas.
+
+                            2
+                            Depois coloque em uma panela e deixe cozinhar por 15 minutos, veja se está cozido o bacalhau.
+                            
+                            3
+                            Coloque em pano limpo e bata com um soquete até que esteja desfiado, retirando as espinhas.
+                            
+                            4
+                            Com a água do bacalhau cozinhe as batatas e esprema como um purê.
+                            
+                            5
+                            Coloque em uma panela o azeite e a cebola bem batida, depois de acrescente o alho amassado.
+                            
+                            6
+                            Misture o bacalhau e as batatas como um refogado.
+                            
+                            7
+                            Acrescente a farinha polvilhando e a salsa, mexendo sempre com uma colher de pau, até que se tenha consistência.
+                            
+                            8
+                            Reserve e deixe esfriar.
+                            
+                            9
+                            Com a mão untada com farinha faça as bolinhas ou compridos.
+                            
+                            10
+                            Frite em óleo brando, aos poucos, senão fica gorduroso.</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div id="receitas" class="receitas">
-            <!-- As receitas serão exibidas aqui -->
+        <div class="accordion-item">
+            <div class="accordion-title">Doces</div>
+            <div class="accordion-content">
+                <div class="card">
+                    <img src="img/bombom na travessa.jpg" alt="Bombom">
+                    <div class="card-content">
+                        <h3>Bombom nma travessa</h3>
+                        <p>Ingredientes:250 g de chocolate ao leite
+                            chocolate meio amargo
+                            250 g de chocolate meio amargo
+                            leite condensado
+                            2 latas de leite condensado
+                            creme de leite
+                            2 latas de creme de leite
+                            margarina
+                            2 colheres de margarina
+                            morango
+                            2 caixas de morango</p>
+                        <p>Modo de preparo: 1
+                            Coloque as latas de leite condensado em uma panela com a manteiga e faça uma massa como um brigadeiro mole.
+                            
+                            2
+                            Coloque em uma travessa e, por cima deste brigadeiro mole, coloque os morangos cortados ao meio.
+                            
+                            3
+                            Reserve para fazer a cobertura.
+                            
+                            4
+                            Para fazer a cobertura, rale o chocolate ao leite e o meio amargo e misture ao creme de leite.
+                            
+                            5
+                            Misture e coloque no micro-ondas durante 1 minuto.
+                            
+                            6
+                            Retire e mexa
+                            
+                            7
+                            Coloque de novo no micro-ondas por mais 1 minuto.
+                            
+                            8
+                            Despeje a cobertura por cima dos morangos e leve à geladeira coberta por papel-filme.
+                            
+                            </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <div class="accordion-title">Sucos</div>
+            <div class="accordion-content">
+                <div class="card">
+                    <img src="img/sucomanga.webp" alt="SuCO">
+                    <div class="card-content">
+                        <h3>Suco de manga </h3>
+                        <p>Ingredientes: 3 mangas grandes
+
+                            3/4 de litro de água</p>
+                        <p>Modo de preparo: Descasque as mangas e pique.
+                            Coloque a polpa da fruta no liquidificador com água e bata por 5 minutos.
+                            Coe o líquido com uma peneira.
+                            Coloque a bebida em uma jarra com gelo e açúcar a gosto.
+                            Agora é só servir! Aproveite.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+<br><br><br><br><br><br><br><br>
 
-    <script>
-        function mostrarReceitas(categoria) {
-            const receitasContainer = document.getElementById("receitas");
-
-            let receitasHTML = ""; // String para armazenar o conteúdo HTML das receitas
-
-            if (categoria === "salgado") {
-                receitasHTML = `
-                    <h2>Receitas Salgado:</h2>
-                    <p><strong>1. Pastel de Carne:</strong><br>Ingredientes: Massa de pastel, carne moída, cebola, alho, temperos.<br>Método: Recheie a massa e frite até dourar.</p>
-                    <p><strong>2. Empada de Frango:</strong><br>Ingredientes: Massa de empada, frango desfiado, molho de tomate.<br>Método: Modele as empadas e asse até dourar.</p>
-                `;
-            } else if (categoria === "doce") {
-                receitasHTML = `
-                    <h2>Receitas Doce:</h2>
-                    <p><strong>1. Brigadeiro:</strong><br>Ingredientes: Leite condensado, chocolate em pó, manteiga.<br>Método: Cozinhe os ingredientes até atingir o ponto de brigadeiro e enrole.</p>
-                    <p><strong>2. Pudim de Leite Condensado:</strong><br>Ingredientes: Leite condensado, ovos, leite, açúcar.<br>Método: Bata os ingredientes, caramelize a forma e asse em banho-maria.</p>
-                `;
-            } else if (categoria === "sucos") {
-                receitasHTML = `
-                    <h2>Receitas Sucos:</h2>
-                    <p><strong>1. Suco de Laranja:</strong><br>Ingredientes: Laranjas frescas, açúcar (opcional).<br>Método: Esprema as laranjas e adoce a gosto.</p>
-                    <p><strong>2. Suco Verde:</strong><br>Ingredientes: Couve, maçã, limão, gengibre, água.<br>Método: Bata todos os ingredientes no liquidificador e sirva.</p>
-                `;
-            }
-
-            // Atualiza o conteúdo da div de receitas
-            receitasContainer.innerHTML = receitasHTML;
-        }
-    </script>
+    <footer>
+        <p>&copy; 2025 Receitas Deliciosas. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
